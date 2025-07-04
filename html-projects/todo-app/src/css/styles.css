@@ -6,7 +6,17 @@
 }
 
 :root {
-    /* Paleta de colores profesional moderna */
+    /* Colores del tema claro */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-tertiary: #94a3b8;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+    
+    /* Colores primarios */
     --primary-50: #eff6ff;
     --primary-100: #dbeafe;
     --primary-200: #bfdbfe;
@@ -18,7 +28,7 @@
     --primary-800: #1e40af;
     --primary-900: #1e3a8a;
     
-    /* Estados de tareas con colores profesionales */
+    /* Estados de tareas */
     --todo-50: #fef2f2;
     --todo-100: #fee2e2;
     --todo-200: #fecaca;
@@ -46,272 +56,395 @@
     --done-600: #059669;
     --done-700: #047857;
     
-    /* Grises neutros */
-    --gray-0: #ffffff;
-    --gray-25: #fcfcfd;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-400: #9ca3af;
-    --gray-500: #6b7280;
-    --gray-600: #4b5563;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
-    --gray-950: #030712;
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     
-    /* Sistema de sombras profesional */
-    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+    /* Espaciado */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
     
-    /* Sombras de colores */
-    --shadow-primary: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
-    --shadow-todo: 0 10px 15px -3px rgba(239, 68, 68, 0.1), 0 4px 6px -4px rgba(239, 68, 68, 0.1);
-    --shadow-doing: 0 10px 15px -3px rgba(245, 158, 11, 0.1), 0 4px 6px -4px rgba(245, 158, 11, 0.1);
-    --shadow-done: 0 10px 15px -3px rgba(16, 185, 129, 0.1), 0 4px 6px -4px rgba(16, 185, 129, 0.1);
-    
-    /* Tipografía con escala armónica */
+    /* Tipografía */
     --font-family-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-family-mono: ui-monospace, SFMono-Regular, 'Cascadia Code', Consolas, monospace;
-    
-    --font-size-xs: 0.75rem;     /* 12px */
-    --font-size-sm: 0.875rem;    /* 14px */
-    --font-size-base: 1rem;      /* 16px */
-    --font-size-lg: 1.125rem;    /* 18px */
-    --font-size-xl: 1.25rem;     /* 20px */
-    --font-size-2xl: 1.5rem;     /* 24px */
-    --font-size-3xl: 1.875rem;   /* 30px */
-    --font-size-4xl: 2.25rem;    /* 36px */
-    
-    --font-weight-light: 300;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     
-    --line-height-tight: 1.25;
-    --line-height-snug: 1.375;
-    --line-height-normal: 1.5;
-    --line-height-relaxed: 1.625;
-    --line-height-loose: 2;
+    /* Bordes */
+    --radius-sm: 0.125rem;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-full: 9999px;
     
-    /* Sistema de espaciado basado en múltiplos de 4px */
-    --space-0: 0;
-    --space-1: 0.25rem;   /* 4px */
-    --space-2: 0.5rem;    /* 8px */
-    --space-3: 0.75rem;   /* 12px */
-    --space-4: 1rem;      /* 16px */
-    --space-5: 1.25rem;   /* 20px */
-    --space-6: 1.5rem;    /* 24px */
-    --space-7: 1.75rem;   /* 28px */
-    --space-8: 2rem;      /* 32px */
-    --space-10: 2.5rem;   /* 40px */
-    --space-12: 3rem;     /* 48px */
-    --space-14: 3.5rem;   /* 56px */
-    --space-16: 4rem;     /* 64px */
-    --space-20: 5rem;     /* 80px */
-    --space-24: 6rem;     /* 96px */
+    /* Transiciones */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
+}
+
+/* Tema oscuro */
+:root.dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --border-color: #334155;
+    --border-hover: #475569;
     
-    /* Bordes con escala consistente */
-    --border-radius-none: 0;
-    --border-radius-sm: 0.125rem;   /* 2px */
-    --border-radius-base: 0.25rem;  /* 4px */
-    --border-radius-md: 0.375rem;   /* 6px */
-    --border-radius-lg: 0.5rem;     /* 8px */
-    --border-radius-xl: 0.75rem;    /* 12px */
-    --border-radius-2xl: 1rem;      /* 16px */
-    --border-radius-3xl: 1.5rem;    /* 24px */
-    --border-radius-full: 9999px;
-    
-    /* Transiciones y animaciones */
-    --transition-all: all 0.15s ease-in-out;
-    --transition-colors: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-    --transition-opacity: opacity 0.15s ease-in-out;
-    --transition-transform: transform 0.15s ease-in-out;
-    --transition-shadow: box-shadow 0.15s ease-in-out;
-    
-    /* Z-index scale */
-    --z-dropdown: 1000;
-    --z-sticky: 1020;
-    --z-fixed: 1030;
-    --z-modal-backdrop: 1040;
-    --z-modal: 1050;
-    --z-popover: 1060;
-    --z-tooltip: 1070;
-    --z-toast: 1080;
+    /* Ajustar sombras para modo oscuro */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+}
+
+/* Preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-tertiary: #94a3b8;
+        --border-color: #334155;
+        --border-hover: #475569;
+        
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+        --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+    }
 }
 
 /* Importar fuente Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family:Inter:wght@400;500;600;700;800&display=swap');
 
 /* Configuración base del body */
 body {
     font-family: var(--font-family-sans);
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 50%, var(--primary-50) 100%);
-    color: var(--gray-900);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
     min-height: 100vh;
-    line-height: var(--line-height-normal);
+    line-height: 1.6;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-normal);
-    padding: var(--space-6);
+    transition: background-color var(--transition-normal), color var(--transition-normal);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container principal con máximo ancho */
-.container {
-    max-width: 90rem; /* 1440px */
-    margin: 0 auto;
-    padding: 0 var(--space-4);
-}
-
-/* Encabezado elegante con línea decorativa */
-h1 {
-    text-align: center;
-    color: var(--gray-900);
-    margin-bottom: var(--space-12);
-    font-size: var(--font-size-4xl);
-    font-weight: var(--font-weight-extrabold);
-    letter-spacing: -0.025em;
-    position: relative;
-    background: linear-gradient(135deg, var(--gray-900) 0%, var(--primary-600) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    bottom: calc(-1 * var(--space-4));
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6rem;
-    height: 0.25rem;
-    background: linear-gradient(90deg, var(--primary-500), var(--primary-300), var(--primary-500));
-    border-radius: var(--border-radius-full);
-    box-shadow: var(--shadow-primary);
-}
-
-/* Formulario para agregar tareas con micro-interacciones */
-.task-form {
-    background: var(--gray-0);
-    padding: var(--space-8);
-    border-radius: var(--border-radius-2xl);
-    margin-bottom: var(--space-12);
-    box-shadow: var(--shadow-xl);
-    border: 1px solid var(--gray-200);
+/* Toggle de modo oscuro */
+.dark-mode-toggle {
+    position: fixed;
+    top: var(--space-6);
+    right: var(--space-6);
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: var(--radius-full);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-fast);
+    z-index: 1000;
     display: flex;
-    gap: var(--space-4);
     align-items: center;
-    transition: var(--transition-all);
-    position: relative;
-    overflow: hidden;
+    justify-content: center;
+    border: 1px solid var(--border-color);
 }
 
-.task-form::before {
-    content: '';
-    position: absolute;
+.dark-mode-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+    background: var(--bg-tertiary);
+}
+
+.dark-mode-toggle svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: all var(--transition-fast);
+}
+
+/* Mostrar/ocultar iconos según el tema */
+:root .dark-mode-toggle .sun-icon {
+    display: block;
+}
+
+:root .dark-mode-toggle .moon-icon {
+    display: none;
+}
+
+:root.dark .dark-mode-toggle .sun-icon {
+    display: none;
+}
+
+:root.dark .dark-mode-toggle .moon-icon {
+    display: block;
+}
+
+/* Loader global */
+.global-loader {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    height: 0.125rem;
-    background: linear-gradient(90deg, var(--primary-500), var(--primary-300), var(--primary-500));
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
     opacity: 0;
-    transition: var(--transition-opacity);
+    visibility: hidden;
+    transition: all var(--transition-normal);
+}
+
+.global-loader.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader-content {
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.loader-icon {
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid var(--border-color);
+    border-top: 3px solid var(--primary-500);
+    border-radius: var(--radius-full);
+    animation: spin 1s linear infinite;
+    margin: 0 auto var(--space-4);
+}
+
+.loader-text {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-secondary);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Container principal */
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: var(--space-6);
+    padding-top: var(--space-20); /* Espacio para el toggle */
+}
+
+/* Header principal */
+.main-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.main-header h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-extrabold);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.header-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--primary-500);
+}
+
+/* Toolbar */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-primary);
+    padding: var(--space-6);
+    border-radius: var(--radius-2xl);
+    margin-bottom: var(--space-8);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.toolbar-section {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.toolbar-btn:hover:not(:disabled) {
+    background: var(--primary-50);
+    border-color: var(--primary-500);
+    color: var(--primary-700);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+:root.dark .toolbar-btn:hover:not(:disabled) {
+    background: var(--primary-900);
+    color: var(--primary-300);
+}
+
+.toolbar-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.toolbar-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Formulario para agregar tareas */
+.task-form {
+    background: var(--bg-primary);
+    padding: var(--space-8);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-2xl);
+    margin-bottom: var(--space-12);
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-fast);
 }
 
 .task-form:hover {
-    box-shadow: var(--shadow-2xl);
-    transform: translateY(-0.125rem);
-    border-color: var(--primary-200);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--border-hover);
 }
 
-.task-form:hover::before,
-.task-form:focus-within::before {
-    opacity: 1;
+.form-row {
+    display: flex;
+    gap: var(--space-4);
+    align-items: flex-end;
+    flex-wrap: wrap;
 }
 
-.task-form:focus-within {
-    box-shadow: var(--shadow-2xl), 0 0 0 0.25rem var(--primary-100);
-    transform: translateY(-0.125rem);
-    border-color: var(--primary-300);
+/* Inputs y selects */
+.select-input,
+.date-input,
+#taskInput {
+    padding: var(--space-4);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-fast);
+    font-family: inherit;
 }
 
-/* Input con estados elegantes */
 #taskInput {
     flex: 1;
-    padding: var(--space-4) var(--space-5);
-    border: 0.125rem solid var(--gray-200);
-    border-radius: var(--border-radius-xl);
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-    outline: none;
-    transition: var(--transition-all);
-    background: var(--gray-50);
-    color: var(--gray-900);
-    line-height: var(--line-height-tight);
+    min-width: 250px;
 }
 
-#taskInput:focus {
+.select-input {
+    min-width: 150px;
+}
+
+.date-input {
+    min-width: 150px;
+}
+
+#taskInput:focus,
+.select-input:focus,
+.date-input:focus {
+    outline: none;
     border-color: var(--primary-500);
-    background: var(--gray-0);
-    box-shadow: 0 0 0 0.1875rem var(--primary-100);
-    transform: translateY(-0.0625rem);
+    box-shadow: 0 0 0 3px var(--primary-100);
+    background: var(--bg-primary);
+}
+
+:root.dark #taskInput:focus,
+:root.dark .select-input:focus,
+:root.dark .date-input:focus {
+    box-shadow: 0 0 0 3px var(--primary-900);
 }
 
 #taskInput::placeholder {
-    color: var(--gray-400);
-    font-weight: var(--font-weight-normal);
+    color: var(--text-tertiary);
 }
 
-/* Botón principal con gradiente y efectos */
+/* Botón principal */
 #addTaskButton {
-    background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-500) 50%, var(--primary-400) 100%);
-    color: var(--gray-0);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    color: white;
     border: none;
     padding: var(--space-4) var(--space-6);
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--radius-lg);
     cursor: pointer;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-semibold);
-    transition: var(--transition-all);
+    transition: all var(--transition-fast);
     white-space: nowrap;
-    box-shadow: var(--shadow-primary);
-    position: relative;
-    overflow: hidden;
-}
-
-#addTaskButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.6s ease;
+    box-shadow: var(--shadow-md);
 }
 
 #addTaskButton:hover {
-    transform: translateY(-0.125rem);
-    box-shadow: var(--shadow-xl), var(--shadow-primary);
-    background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-600) 50%, var(--primary-500) 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, var(--primary-700), var(--primary-600));
 }
 
-#addTaskButton:hover::before {
-    left: 100%;
-}
-
-#addTaskButton:active {
-    transform: translateY(0);
+#addTaskButton svg {
+    width: 18px;
+    height: 18px;
 }
 
 /* Grid del tablero Kanban */
@@ -322,57 +455,20 @@ h1::after {
     align-items: start;
 }
 
-/* Columnas del tablero con indicadores de estado */
+/* Columnas del tablero */
 .kanban-column {
-    background: var(--gray-0);
-    border-radius: var(--border-radius-2xl);
-    padding: var(--space-8);
+    background: var(--bg-primary);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6);
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--gray-200);
-    min-height: 40rem;
-    transition: var(--transition-all);
-    position: relative;
-    overflow: hidden;
-}
-
-.kanban-column::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0.25rem;
-    background: var(--gray-300);
-    transition: var(--transition-all);
-}
-
-.kanban-column[data-status="todo"]::before {
-    background: linear-gradient(90deg, var(--todo-500), var(--todo-300));
-}
-
-.kanban-column[data-status="doing"]::before {
-    background: linear-gradient(90deg, var(--doing-500), var(--doing-300));
-}
-
-.kanban-column[data-status="done"]::before {
-    background: linear-gradient(90deg, var(--done-500), var(--done-300));
+    border: 1px solid var(--border-color);
+    min-height: 35rem;
+    transition: all var(--transition-fast);
 }
 
 .kanban-column:hover {
-    transform: translateY(-0.25rem);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-xl);
-}
-
-.kanban-column[data-status="todo"]:hover {
-    box-shadow: var(--shadow-xl), var(--shadow-todo);
-}
-
-.kanban-column[data-status="doing"]:hover {
-    box-shadow: var(--shadow-xl), var(--shadow-doing);
-}
-
-.kanban-column[data-status="done"]:hover {
-    box-shadow: var(--shadow-xl), var(--shadow-done);
 }
 
 /* Headers de columnas */
@@ -380,45 +476,59 @@ h1::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-6);
     padding-bottom: var(--space-4);
-    border-bottom: 0.125rem solid var(--gray-100);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .column-header h2 {
-    color: var(--gray-800);
+    color: var(--text-primary);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
     display: flex;
     align-items: center;
     gap: var(--space-2);
-    line-height: var(--line-height-tight);
 }
 
-/* Contadores con colores específicos */
+.column-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.kanban-column[data-status="todo"] .column-icon {
+    color: var(--todo-500);
+}
+
+.kanban-column[data-status="doing"] .column-icon {
+    color: var(--doing-500);
+}
+
+.kanban-column[data-status="done"] .column-icon {
+    color: var(--done-500);
+}
+
+/* Contadores */
 .task-count {
-    background: var(--gray-500);
-    color: var(--gray-0);
+    background: var(--text-secondary);
+    color: var(--bg-primary);
     padding: var(--space-1) var(--space-3);
-    border-radius: var(--border-radius-full);
+    border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-semibold);
     min-width: 1.75rem;
     text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-all);
 }
 
 .kanban-column[data-status="todo"] .task-count {
-    background: linear-gradient(135deg, var(--todo-500), var(--todo-400));
+    background: var(--todo-500);
 }
 
 .kanban-column[data-status="doing"] .task-count {
-    background: linear-gradient(135deg, var(--doing-500), var(--doing-400));
+    background: var(--doing-500);
 }
 
 .kanban-column[data-status="done"] .task-count {
-    background: linear-gradient(135deg, var(--done-500), var(--done-400));
+    background: var(--done-500);
 }
 
 /* Listas de tareas */
@@ -427,49 +537,31 @@ h1::after {
     padding: var(--space-2) 0;
 }
 
-/* Tarjetas de tareas con efectos premium */
+/* Tarjetas de tareas */
 .task-card {
-    background: var(--gray-0);
-    border-radius: var(--border-radius-xl);
-    padding: var(--space-6);
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-5);
     margin-bottom: var(--space-4);
     box-shadow: var(--shadow-md);
-    border: 1px solid var(--gray-200);
-    transition: var(--transition-all);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
     cursor: grab;
     position: relative;
-    overflow: hidden;
-}
-
-.task-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0.25rem;
-    background: var(--primary-500);
-    transform: scaleY(0);
-    transition: var(--transition-transform);
-    transform-origin: bottom;
 }
 
 .task-card:hover {
-    transform: translateY(-0.125rem);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    border-color: var(--gray-300);
-}
-
-.task-card:hover::before {
-    transform: scaleY(1);
+    border-color: var(--border-hover);
 }
 
 .task-card.dragging {
     opacity: 0.8;
     transform: rotate(2deg) scale(1.02);
     cursor: grabbing;
-    box-shadow: var(--shadow-2xl);
-    z-index: var(--z-modal);
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
 }
 
 /* Contenido de las tareas */
@@ -478,177 +570,140 @@ h1::after {
     justify-content: space-between;
     align-items: flex-start;
     gap: var(--space-4);
+    flex-direction: column;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .task-text {
-    flex: 1;
-    font-size: var(--font-size-base);
-    color: var(--gray-700);
-    line-height: var(--line-height-relaxed);
+    color: var(--text-primary);
+    line-height: 1.5;
     word-break: break-word;
     font-weight: var(--font-weight-medium);
+    margin: var(--space-2) 0;
 }
 
-/* Acciones de tareas con micro-interacciones */
+/* Acciones de tareas */
 .task-actions {
     display: flex;
     gap: var(--space-2);
-    flex-shrink: 0;
-    opacity: 0.7;
-    transition: var(--transition-opacity);
-}
-
-.task-card:hover .task-actions {
-    opacity: 1;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: var(--space-3);
 }
 
 .task-button {
-    background: none;
-    border: none;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
     padding: var(--space-2) var(--space-3);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radius-md);
     cursor: pointer;
     font-size: var(--font-size-xs);
-    transition: var(--transition-all);
-    color: var(--gray-600);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 5rem;
-    height: 2rem;
+    transition: all var(--transition-fast);
+    color: var(--text-primary);
     font-weight: var(--font-weight-medium);
     white-space: nowrap;
-    position: relative;
-    overflow: hidden;
-}
-
-.task-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.4s ease;
 }
 
 .task-button:hover {
-    transform: translateY(-0.0625rem);
-    box-shadow: var(--shadow-md);
-}
-
-.task-button:hover::before {
-    left: 100%;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
 }
 
 .move-button {
-    background: linear-gradient(135deg, var(--primary-500), var(--primary-400));
-    color: var(--gray-0);
-    min-width: 5rem;
+    background: var(--primary-500);
+    color: white;
+    border-color: var(--primary-600);
 }
 
 .move-button:hover {
-    background: linear-gradient(135deg, var(--primary-600), var(--primary-500));
+    background: var(--primary-600);
 }
 
 .delete-button {
-    background: linear-gradient(135deg, var(--todo-500), var(--todo-400));
-    color: var(--gray-0);
-    min-width: 2.25rem;
-    padding: var(--space-2);
+    background: var(--todo-500);
+    color: white;
+    border-color: var(--todo-600);
 }
 
 .delete-button:hover {
-    background: linear-gradient(135deg, var(--todo-600), var(--todo-500));
+    background: var(--todo-600);
 }
 
 /* Estados de drag and drop */
 .kanban-column.drag-over {
-    background: linear-gradient(135deg, var(--primary-50), var(--primary-25));
-    border: 0.125rem dashed var(--primary-400);
-    transform: scale(1.01);
-    box-shadow: var(--shadow-xl), var(--shadow-primary);
+    background: var(--primary-50);
+    border: 2px dashed var(--primary-400);
+    transform: scale(1.02);
 }
 
-/* Animaciones fluidas */
-@keyframes slideInFromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-1rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+:root.dark .kanban-column.drag-over {
+    background: var(--primary-900);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(0.5rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes shimmer {
-    from {
-        background-position: -200% center;
-    }
-    to {
-        background-position: 200% center;
-    }
-}
-
-.task-card {
-    animation: slideInFromTop 0.4s ease-out;
-}
-
-.kanban-column {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Estados vacíos con estilo */
+/* Estados vacíos */
 .task-list:empty::after {
-    content: 'Arrastra tareas aquí o usa el botón para mover';
+    content: 'Arrastra tareas aquí';
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 12.5rem;
-    color: var(--gray-400);
+    height: 8rem;
+    color: var(--text-tertiary);
     font-style: italic;
     text-align: center;
-    border: 0.125rem dashed var(--gray-300);
-    border-radius: var(--border-radius-xl);
-    background: var(--gray-25);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-xl);
+    background: var(--bg-secondary);
 }
 
 /* Scrollbar personalizada */
 .task-list::-webkit-scrollbar {
-    width: 0.375rem;
+    width: 6px;
 }
 
 .task-list::-webkit-scrollbar-track {
-    background: var(--gray-100);
-    border-radius: var(--border-radius-base);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
 }
 
 .task-list::-webkit-scrollbar-thumb {
-    background: var(--gray-300);
-    border-radius: var(--border-radius-base);
-    transition: var(--transition-colors);
+    background: var(--border-color);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition-fast);
 }
 
 .task-list::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-400);
+    background: var(--border-hover);
 }
 
-/* Responsive Design con breakpoints consistentes */
+/* Clase de utilidad para accesibilidad */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Toast notifications */
+.toast-container {
+    position: fixed;
+    top: var(--space-6);
+    right: var(--space-6);
+    z-index: 1050;
+    max-width: 20rem;
+}
+
+/* Responsive */
 @media (max-width: 1024px) {
     .kanban-board {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -656,122 +711,84 @@ h1::after {
     }
     
     .container {
-        padding: 0 var(--space-3);
-    }
-    
-    h1 {
-        font-size: var(--font-size-3xl);
+        padding: var(--space-4);
+        padding-top: var(--space-16);
     }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: var(--space-4);
-    }
-    
     .kanban-board {
         grid-template-columns: 1fr;
         gap: var(--space-6);
     }
     
-    .task-form {
+    .toolbar {
         flex-direction: column;
         gap: var(--space-4);
-        padding: var(--space-6);
+    }
+    
+    .toolbar-section {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
     }
     
     #taskInput {
-        width: 100%;
+        min-width: auto;
     }
     
-    h1 {
+    .main-header h1 {
         font-size: var(--font-size-2xl);
-        margin-bottom: var(--space-8);
+        flex-direction: column;
+        gap: var(--space-2);
     }
     
-    .kanban-column {
-        min-height: 25rem;
-        padding: var(--space-6);
+    .dark-mode-toggle {
+        top: var(--space-4);
+        right: var(--space-4);
+        width: 2.5rem;
+        height: 2.5rem;
     }
     
-    .task-card {
-        padding: var(--space-5);
-    }
-    
-    .column-header h2 {
-        font-size: var(--font-size-lg);
-    }
-    
-    .task-button {
-        min-width: 4rem;
-        font-size: var(--font-size-xs);
-        padding: var(--space-1) var(--space-2);
-    }
-    
-    .move-button {
-        min-width: 4.5rem;
-    }
-    
-    .delete-button {
-        min-width: 2rem;
+    .dark-mode-toggle svg {
+        width: 1rem;
+        height: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    body {
+    .container {
         padding: var(--space-3);
-    }
-    
-    .task-form {
-        padding: var(--space-4);
+        padding-top: var(--space-12);
     }
     
     .kanban-column {
         padding: var(--space-4);
     }
     
-    .task-content {
-        flex-direction: column;
-        gap: var(--space-3);
-    }
-    
-    .task-actions {
-        align-self: stretch;
-        justify-content: space-between;
-    }
-    
-    .task-button {
-        flex: 1;
-        min-width: auto;
-    }
-    
-    h1 {
-        font-size: var(--font-size-xl);
-    }
-    
-    .container {
-        padding: 0 var(--space-2);
+    .task-card {
+        padding: var(--space-4);
     }
 }
 
-/* Modo de alto contraste para accesibilidad */
+/* Modo de alto contraste */
 @media (prefers-contrast: high) {
     :root {
-        --gray-50: #ffffff;
-        --gray-100: #f0f0f0;
-        --gray-900: #000000;
+        --border-color: #000000;
+        --text-secondary: #000000;
     }
     
-    .task-card {
-        border: 0.125rem solid var(--gray-900);
-    }
-    
-    .task-button {
-        border: 0.0625rem solid currentColor;
+    :root.dark {
+        --border-color: #ffffff;
+        --text-secondary: #ffffff;
     }
 }
 
-/* Modo de movimiento reducido */
+/* Movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -779,41 +796,5 @@ h1::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Estados de focus para accesibilidad */
-.task-button:focus,
-#addTaskButton:focus,
-#taskInput:focus {
-    outline: 0.125rem solid var(--primary-500);
-    outline-offset: 0.125rem;
-}
-
-/* Loading state para botones */
-.task-button:disabled,
-#addTaskButton:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* Print styles */
-@media print {
-    body {
-        background: white;
-        color: black;
-    }
-    
-    .task-form,
-    .task-actions {
-        display: none;
-    }
-    
-    .kanban-column {
-        break-inside: avoid;
-        box-shadow: none;
-        border: 1px solid black;
     }
 }

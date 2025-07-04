@@ -3,55 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablero Kanban</title>
+    <title>Tablero Kanban Profesional</title>
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Tablero Kanban para gestión de tareas con drag & drop">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <h1>📋 Tablero Kanban</h1>
-        
-        <!-- Formulario para agregar nueva tarea -->
-        <div class="task-form">
-            <input type="text" id="taskInput" placeholder="Agregar nueva tarea...">
-            <button id="addTaskButton">➕ Agregar Tarea</button>
-        </div>
-        
-        <!-- Tablero Kanban -->
-        <div class="kanban-board">
-            <!-- Columna To Do -->
-            <div class="kanban-column" data-status="todo">
-                <div class="column-header">
-                    <h2>📝 To Do</h2>
-                    <span class="task-count" id="todo-count">0</span>
-                </div>
-                <div class="task-list" id="todo-list" data-status="todo">
-                    <!-- Las tareas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-            
-            <!-- Columna Doing -->
-            <div class="kanban-column" data-status="doing">
-                <div class="column-header">
-                    <h2>⚡ Doing</h2>
-                    <span class="task-count" id="doing-count">0</span>
-                </div>
-                <div class="task-list" id="doing-list" data-status="doing">
-                    <!-- Las tareas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
-            
-            <!-- Columna Done -->
-            <div class="kanban-column" data-status="done">
-                <div class="column-header">
-                    <h2>✅ Done</h2>
-                    <span class="task-count" id="done-count">0</span>
-                </div>
-                <div class="task-list" id="done-list" data-status="done">
-                    <!-- Las tareas se agregarán aquí dinámicamente -->
-                </div>
-            </div>
+    <!-- Loading global -->
+    <div class="global-loader" id="globalLoader">
+        <div class="loader-content">
+            <div class="loader-icon"></div>
+            <span class="loader-text">Cargando tablero...</span>
         </div>
     </div>
+
+    <!-- Toggle de modo oscuro -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Alternar modo oscuro">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>
+                <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="9" x2="15" y2="9"></line>
+                    <line x1="9" y1="13" x2="15" y2="13"></line>
+                    <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+                Tablero Kanban Profesional
+            </h1>
+        </header>
+        
+        <!-- Barra de herramientas -->
+        <div class="toolbar" role="toolbar" aria-label="Herramientas del tablero">
+            <div class="toolbar-section">
+                <label for="templateSelect" class="visually-hidden">Seleccionar template</label>
+                <select id="templateSelect" class="select-input" aria-label="Seleccionar template de tarea">
+                    <option value="">Seleccionar template...</option>
+                </select>
+                <button id="useTemplateBtn" class="toolbar-btn" disabled aria-label="Usar template seleccionado">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="9"></line>
+                        <line x1="9" y1="13" x2="15" y2="13"></line>
+                    </svg>
+                    Usar Template
+                </button>
+            </div>
+            
+            <div class="toolbar-section">
+                <label for="userFilter" class="visually-hidden">Filtrar por usuario</label>
+                <select id="userFilter" class="select-input" aria-label="Filtrar tareas por usuario">
+                    <option value="">Todos los usuarios</option>
+                </select>
+                <label for="priorityFilter" class="visually-hidden">Filtrar por prioridad</label>
+                <select id="priorityFilter" class="select-input" aria-label="Filtrar tareas por prioridad">
+                    <option value="">Todas las prioridades</option>
+                    <option value="high">🔴 Alta</option>
+                    <option value="medium">🟡 Media</option>
+                    <option value="low">🟢 Baja</option>
+                </select>
+            </div>
+            
+            <div class="toolbar-section">
+                <button id="syncAPIBtn" class="toolbar-btn" aria-label="Sincronizar con API externa">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6"></path>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                    Sincronizar API
+                </button>
+                <button id="showStatsBtn" class="toolbar-btn" aria-label="Mostrar estadísticas del tablero">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    Estadísticas
+                </button>
+                <button id="manageUsersBtn" class="toolbar-btn" aria-label="Gestionar usuarios">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    Usuarios
+                </button>
+                <button id="manageTemplatesBtn" class="toolbar-btn" aria-label="Gestionar templates">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                    </svg>
+                    Templates
+                </button>
+            </div>
+        </div>
+        
+        <!-- Formulario para agregar nueva tarea -->
+        <form class="task-form" role="form" aria-label="Formulario para agregar nueva tarea">
+            <div class="form-row">
+                <label for="taskInput" class="visually-hidden">Texto de la nueva tarea</label>
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Agregar nueva tarea..."
+                    aria-label="Texto de la nueva tarea"
+                    autocomplete="off"
+                    required
+                >
+                
+                <label for="prioritySelect" class="visually-hidden">Prioridad de la tarea</label>
+                <select id="prioritySelect" class="select-input" aria-label="Seleccionar prioridad">
+                    <option value="medium">🟡 Media</option>
+                    <option value="high">🔴 Alta</option>
+                    <option value="low">🟢 Baja</option>
+                </select>
+                
+                <label for="assignUserSelect" class="visually-hidden">Asignar usuario</label>
+                <select id="assignUserSelect" class="select-input" aria-label="Asignar a usuario">
+                    <option value="">Sin asignar</option>
+                </select>
+                
+                <label for="dueDateInput" class="visually-hidden">Fecha límite</label>
+                <input 
+                    type="date" 
+                    id="dueDateInput" 
+                    class="date-input"
+                    aria-label="Fecha límite de la tarea"
+                >
+                
+                <button type="button" id="addTaskButton" aria-label="Agregar nueva tarea al tablero">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Agregar Tarea
+                </button>
+            </div>
+        </form>
+        
+        <!-- Tablero Kanban -->
+        <main class="kanban-board" role="main" aria-label="Tablero Kanban">
+            <!-- Columna To Do -->
+            <section class="kanban-column" data-status="todo" aria-label="Tareas pendientes">
+                <div class="column-header">
+                    <h2>
+                        <svg class="column-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="13" x2="15" y2="13"></line>
+                            <line x1="9" y1="17" x2="15" y2="17"></line>
+                        </svg>
+                        To Do
+                    </h2>
+                    <span class="task-count" id="todo-count" aria-label="Número de tareas pendientes">0</span>
+                </div>
+                <div class="task-list" id="todo-list" data-status="todo" 
+                     role="list" aria-label="Lista de tareas pendientes"
+                     tabindex="0" aria-dropeffect="move">
+                    <!-- Las tareas se agregarán aquí dinámicamente -->
+                </div>
+            </section>
+            
+            <!-- Columna Doing -->
+            <section class="kanban-column" data-status="doing" aria-label="Tareas en progreso">
+                <div class="column-header">
+                    <h2>
+                        <svg class="column-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6"></path>
+                            <path d="m15.14 8.86 4.24-4.24M4.62 19.38l4.24-4.24M16.86 15.14l4.24 4.24M4.62 4.62l4.24 4.24"></path>
+                        </svg>
+                        Doing
+                    </h2>
+                    <span class="task-count" id="doing-count" aria-label="Número de tareas en progreso">0</span>
+                </div>
+                <div class="task-list" id="doing-list" data-status="doing" 
+                     role="list" aria-label="Lista de tareas en progreso"
+                     tabindex="0" aria-dropeffect="move">
+                    <!-- Las tareas se agregarán aquí dinámicamente -->
+                </div>
+            </section>
+            
+            <!-- Columna Done -->
+            <section class="kanban-column" data-status="done" aria-label="Tareas completadas">
+                <div class="column-header">
+                    <h2>
+                        <svg class="column-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.11 0 2.17.2 3.16.57"></path>
+                        </svg>
+                        Done
+                    </h2>
+                    <span class="task-count" id="done-count" aria-label="Número de tareas completadas">0</span>
+                </div>
+                <div class="task-list" id="done-list" data-status="done" 
+                     role="list" aria-label="Lista de tareas completadas"
+                     tabindex="0" aria-dropeffect="move">
+                    <!-- Las tareas se agregarán aquí dinámicamente -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notificaciones Toast -->
+    <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Scripts -->
     <script src="js/todo.js"></script>
     <script src="js/app.js"></script>
 </body>
