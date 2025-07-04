@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/styles-basic.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>🧮 Calculadora</h1>
+        <input type="text" id="display" class="display" readonly placeholder="0">
+        <div class="buttons">
+            <!-- Primera fila -->
+            <button class="button clear" onclick="clear()">C</button>
+            <button class="button operation" onclick="deleteLast()">⌫</button>
+            <button class="button operation" onclick="handleOperation('/')">/</button>
+            <button class="button operation" onclick="handleOperation('*')">×</button>
+            
+            <!-- Segunda fila -->
+            <button class="button number" onclick="handleNumber('7')">7</button>
+            <button class="button number" onclick="handleNumber('8')">8</button>
+            <button class="button number" onclick="handleNumber('9')">9</button>
+            <button class="button operation" onclick="handleOperation('-')">-</button>
+            
+            <!-- Tercera fila -->
+            <button class="button number" onclick="handleNumber('4')">4</button>
+            <button class="button number" onclick="handleNumber('5')">5</button>
+            <button class="button number" onclick="handleNumber('6')">6</button>
+            <button class="button operation" onclick="handleOperation('+')">+</button>
+            
+            <!-- Cuarta fila -->
+            <button class="button number" onclick="handleNumber('1')">1</button>
+            <button class="button number" onclick="handleNumber('2')">2</button>
+            <button class="button number" onclick="handleNumber('3')">3</button>
+            <button class="button equals" onclick="calculate()" rowspan="2">=</button>
+            
+            <!-- Quinta fila -->
+            <button class="button number zero" onclick="handleNumber('0')">0</button>
+            <button class="button number" onclick="handleNumber('.')">.</button>
+        </div>
+    </div>
+    <script src="js/calculator-basic.js"></script>
+</body>
+</html>

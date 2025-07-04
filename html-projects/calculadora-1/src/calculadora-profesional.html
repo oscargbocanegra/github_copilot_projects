@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="calculator scientific" role="application" aria-label="Calculadora Científica">
+        <!-- Pantalla principal -->
+        <div class="display-container">
+            <div id="history" class="history" aria-label="Historial de operaciones"></div>
+            <input type="text" id="display" class="display" readonly aria-label="Pantalla de visualización">
+        </div>
+        
+        <!-- Controles de memoria -->
+        <div class="memory-controls">
+            <button class="button memory" onclick="memoryAdd()" aria-label="Sumar a memoria">M+</button>
+            <button class="button memory" onclick="memorySubtract()" aria-label="Restar de memoria">M-</button>
+            <button class="button memory" onclick="memoryRecall()" aria-label="Recordar memoria">MR</button>
+            <button class="button memory" onclick="memoryClear()" aria-label="Limpiar memoria">MC</button>
+        </div>
+        
+        <!-- Grid principal de botones -->
+        <div class="button-grid">
+            <!-- Fila 1: Funciones avanzadas -->
+            <button class="button function" onclick="handleFunction('sin')" aria-label="Seno">sin</button>
+            <button class="button function" onclick="handleFunction('cos')" aria-label="Coseno">cos</button>
+            <button class="button function" onclick="handleFunction('tan')" aria-label="Tangente">tan</button>
+            <button class="button function" onclick="handleFunction('sqrt')" aria-label="Raíz cuadrada">√</button>
+            
+            <!-- Fila 2: Constantes y funciones -->
+            <button class="button constant" onclick="handleConstant('pi')" aria-label="Pi">π</button>
+            <button class="button constant" onclick="handleConstant('e')" aria-label="Euler">e</button>
+            <button class="button function" onclick="handleFunction('pow')" aria-label="Potencia">x^y</button>
+            <button class="button function" onclick="handleParenthesis('(')" aria-label="Paréntesis izquierdo">(</button>
+            
+            <!-- Fila 3: Funciones básicas -->
+            <button class="button function clear" onclick="clearAll()" aria-label="Limpiar todo">C</button>
+            <button class="button function backspace" onclick="backspace()" aria-label="Borrar último">⌫</button>
+            <button class="button function" onclick="handleParenthesis(')')" aria-label="Paréntesis derecho">)</button>
+            <button class="button operator" onclick="handleOperation('/')" aria-label="División">÷</button>
+            
+            <!-- Fila 4: Números y operadores -->
+            <button class="button number" onclick="handleNumber('7')" aria-label="Número 7">7</button>
+            <button class="button number" onclick="handleNumber('8')" aria-label="Número 8">8</button>
+            <button class="button number" onclick="handleNumber('9')" aria-label="Número 9">9</button>
+            <button class="button operator" onclick="handleOperation('*')" aria-label="Multiplicación">×</button>
+            
+            <!-- Fila 5: Números y operadores -->
+            <button class="button number" onclick="handleNumber('4')" aria-label="Número 4">4</button>
+            <button class="button number" onclick="handleNumber('5')" aria-label="Número 5">5</button>
+            <button class="button number" onclick="handleNumber('6')" aria-label="Número 6">6</button>
+            <button class="button operator" onclick="handleOperation('-')" aria-label="Resta">-</button>
+            
+            <!-- Fila 6: Números y operadores -->
+            <button class="button number" onclick="handleNumber('1')" aria-label="Número 1">1</button>
+            <button class="button number" onclick="handleNumber('2')" aria-label="Número 2">2</button>
+            <button class="button number" onclick="handleNumber('3')" aria-label="Número 3">3</button>
+            <button class="button operator" onclick="handleOperation('+')" aria-label="Suma">+</button>
+            
+            <!-- Fila 7: Número cero, decimal e igual -->
+            <button class="button number" onclick="handleNumber('0')" aria-label="Número 0" style="grid-column: span 2;">0</button>
+            <button class="button function" onclick="handleNumber('.')" aria-label="Punto decimal">.</button>
+            <button class="button function equals" onclick="calculate()" aria-label="Calcular resultado">=</button>
+        </div>
+        
+        <!-- Panel de historial -->
+        <div class="history-panel" id="historyPanel">
+            <h3>Historial</h3>
+            <div id="historyList" class="history-list"></div>
+            <button class="button function" onclick="clearHistory()">Limpiar Historial</button>
+        </div>
+    </div>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

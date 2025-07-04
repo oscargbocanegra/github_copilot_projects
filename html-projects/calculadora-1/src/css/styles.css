@@ -1,0 +1,281 @@
+/* Estilos CSS para la calculadora */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.calculator {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e9ecef;
+    max-width: 500px; /* Más ancho para calculadora científica */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.calculator.scientific {
+    max-width: 600px; /* Aún más ancho para modo científico */
+}
+
+.display-container {
+    margin-bottom: 15px;
+}
+
+.history {
+    height: 30px;
+    font-size: 0.9rem;
+    color: #6c757d;
+    text-align: right;
+    padding: 5px 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    text-align: right;
+    padding: 0 20px;
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    background: white;
+    color: #212529;
+    font-weight: 500;
+    outline: none;
+}
+
+.memory-controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.button {
+    height: 60px;
+    min-height: 44px;
+    border: none;
+    border-radius: 12px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Botones de números */
+.button.number {
+    background: #6c757d;
+    color: white;
+}
+
+.button.number:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Botones de operadores */
+.button.operator {
+    background: #fd7e14;
+    color: white;
+}
+
+.button.operator:hover {
+    background: #e8690b;
+    transform: translateY(-2px);
+}
+
+/* Botones de funciones científicas */
+.button.function {
+    background: #17a2b8;
+    color: white;
+}
+
+.button.function:hover {
+    background: #138496;
+    transform: translateY(-2px);
+}
+
+/* Botones de constantes */
+.button.constant {
+    background: #6f42c1;
+    color: white;
+}
+
+.button.constant:hover {
+    background: #5a32a3;
+    transform: translateY(-2px);
+}
+
+/* Botones de memoria */
+.button.memory {
+    background: #20c997;
+    color: white;
+    height: 45px;
+    font-size: 0.9rem;
+}
+
+.button.memory:hover {
+    background: #1aa085;
+    transform: translateY(-1px);
+}
+
+/* Botón igual */
+.button.equals {
+    background: #28a745;
+    color: white;
+}
+
+.button.equals:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Botón limpiar */
+.button.clear {
+    background: #dc3545;
+    color: white;
+}
+
+.button.clear:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Botón borrar */
+.button.backspace {
+    background: #6f42c1;
+    color: white;
+}
+
+.button.backspace:hover {
+    background: #5a32a3;
+    transform: translateY(-2px);
+}
+
+/* Panel de historial */
+.history-panel {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    max-height: 200px;
+}
+
+.history-panel h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.history-list {
+    max-height: 120px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.history-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.history-item:hover {
+    background: #e9ecef;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .calculator.scientific {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .button-grid {
+        gap: 10px;
+    }
+    
+    .button {
+        height: 55px;
+        font-size: 0.9rem;
+    }
+    
+    .memory-controls .button {
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    .button {
+        height: 50px;
+        font-size: 0.8rem;
+    }
+    
+    .memory-controls .button {
+        height: 35px;
+        font-size: 0.7rem;
+    }
+    
+    .display {
+        height: 70px;
+        font-size: 1.5rem;
+    }
+    
+    .history {
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Estados activos */
+.button:active {
+    transform: translateY(0);
+}
+
+.button:focus {
+    outline: 3px solid #007bff;
+    outline-offset: 2px;
+}
