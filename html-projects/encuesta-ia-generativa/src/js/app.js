@@ -276,6 +276,38 @@ class SurveyApp {
     restartSurvey() {
         if (window.surveyInstance) {
             window.surveyInstance.restart();
+            this.showToast('Encuesta reiniciada correctamente', 'success');
+        } else {
+            // Si no existe surveyInstance, reiniciar manualmente
+            this.manualRestart();
+            this.showToast('Encuesta reiniciada', 'success');
+        }
+    }
+
+    manualRestart() {
+        // Limpiar localStorage
+        localStorage.removeItem('surveyResponses');
+        localStorage.removeItem('surveyCompleted');
+        localStorage.removeItem('surveyCompletedDate');
+        
+        // Mostrar formulario y ocultar resultados
+        const surveyForm = document.getElementById('surveyForm');
+        const resultsContainer = document.getElementById('resultsContainer');
+        
+        if (surveyForm) {
+            surveyForm.style.display = 'block';
+        }
+        if (resultsContainer) {
+            resultsContainer.style.display = 'none';
+        }
+        
+        // Reinicializar la encuesta si existe
+        if (window.Survey) {
+            // Crear nueva instancia de Survey
+            window.surveyInstance = new Survey();
+        } else {
+            // Recargar la página como último recurso
+            window.location.reload();
         }
     }
 
@@ -352,7 +384,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restaurar idioma guardado
     const savedLanguage = localStorage.getItem('selectedLanguage');
     if (savedLanguage && window.surveyApp) {
-        window.surveyApp.setLanguage(savedLanguage);
-        window.surveyApp.updateLanguageDisplay(savedLanguage);
+        // Usar setTimeout para asegurar que la app esté completamente inicializada
+        setTimeout(() => {
+            window.surveyApp.setLanguage(savedLanguage);
+            window.surveyApp.updateLanguageDisplay(savedLanguage);
+        }, 100);
     }
 });
