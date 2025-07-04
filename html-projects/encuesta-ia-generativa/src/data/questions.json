@@ -1,117 +1,147 @@
 {
-  "questions": [
-    {
-      "id": 1,
-      "type": "multiple-choice",
-      "question": "¿Qué tan familiarizado/a estás con la IA generativa (como ChatGPT, Midjourney, DALL-E)?",
-      "options": [
-        { "value": "muy_familiarizado", "text": "Muy familiarizado - La uso frecuentemente" },
-        { "value": "algo_familiarizado", "text": "Algo familiarizado - La he probado varias veces" },
-        { "value": "poco_familiarizado", "text": "Poco familiarizado - Solo he oído hablar de ella" },
-        { "value": "nada_familiarizado", "text": "Nada familiarizado - Es la primera vez que escucho el término" }
-      ]
-    },
-    {
-      "id": 2,
-      "type": "multiple-choice",
-      "question": "¿Cuál de estas herramientas de IA generativa has utilizado?",
-      "options": [
-        { "value": "chatgpt", "text": "ChatGPT (OpenAI)" },
-        { "value": "copilot", "text": "GitHub Copilot" },
-        { "value": "midjourney", "text": "Midjourney o DALL-E (generación de imágenes)" },
-        { "value": "multiple", "text": "Varias de las anteriores" },
-        { "value": "ninguna", "text": "Ninguna de las anteriores" }
-      ]
-    },
-    {
-      "id": 3,
-      "type": "multiple-choice",
-      "question": "¿Con qué frecuencia utilizas herramientas de IA generativa?",
-      "options": [
-        { "value": "diariamente", "text": "Diariamente" },
-        { "value": "semanalmente", "text": "Varias veces por semana" },
-        { "value": "mensualmente", "text": "Una vez al mes o menos" },
-        { "value": "ocasionalmente", "text": "Solo ocasionalmente" },
-        { "value": "nunca", "text": "Nunca las he usado" }
-      ]
-    },
-    {
-      "id": 4,
-      "type": "multiple-choice",
-      "question": "¿Para qué propósito principal utilizas o utilizarías la IA generativa?",
-      "options": [
-        { "value": "trabajo", "text": "Trabajo y productividad" },
-        { "value": "educacion", "text": "Aprendizaje y educación" },
-        { "value": "creatividad", "text": "Proyectos creativos y arte" },
-        { "value": "entretenimiento", "text": "Entretenimiento personal" },
-        { "value": "investigacion", "text": "Investigación y análisis" }
-      ]
-    },
-    {
-      "id": 5,
-      "type": "multiple-choice",
-      "question": "¿Cuál consideras que es el mayor beneficio de la IA generativa?",
-      "options": [
-        { "value": "eficiencia", "text": "Aumento de la eficiencia y productividad" },
-        { "value": "creatividad", "text": "Potenciar la creatividad humana" },
-        { "value": "accesibilidad", "text": "Democratizar el acceso a capacidades avanzadas" },
-        { "value": "aprendizaje", "text": "Facilitar el aprendizaje y la educación" },
-        { "value": "automatizacion", "text": "Automatizar tareas repetitivas" }
-      ]
-    },
-    {
-      "id": 6,
-      "type": "multiple-choice",
-      "question": "¿Cuál es tu mayor preocupación sobre la IA generativa?",
-      "options": [
-        { "value": "empleos", "text": "Pérdida de empleos y desplazamiento laboral" },
-        { "value": "desinformacion", "text": "Propagación de desinformación y contenido falso" },
-        { "value": "privacidad", "text": "Violación de privacidad y uso de datos personales" },
-        { "value": "dependencia", "text": "Excesiva dependencia de la tecnología" },
-        { "value": "etica", "text": "Falta de regulación ética y transparencia" }
-      ]
-    },
-    {
-      "id": 7,
-      "type": "multiple-choice",
-      "question": "¿Crees que la IA generativa debería ser regulada por los gobiernos?",
-      "options": [
-        { "value": "si_estricta", "text": "Sí, con regulaciones muy estrictas" },
-        { "value": "si_moderada", "text": "Sí, con regulaciones moderadas" },
-        { "value": "autorregulacion", "text": "No, debería ser autorregulada por las empresas" },
-        { "value": "no_regulacion", "text": "No, el mercado libre debe determinar su desarrollo" },
-        { "value": "no_seguro", "text": "No estoy seguro/a" }
-      ]
-    },
-    {
-      "id": 8,
-      "type": "multiple-choice",
-      "question": "¿En qué área crees que la IA generativa tendrá el mayor impacto positivo?",
-      "options": [
-        { "value": "salud", "text": "Salud y medicina" },
-        { "value": "educacion", "text": "Educación y formación" },
-        { "value": "arte", "text": "Arte y entretenimiento" },
-        { "value": "ciencia", "text": "Investigación científica" },
-        { "value": "negocios", "text": "Negocios y comercio" }
-      ]
-    },
-    {
-      "id": 9,
-      "type": "multiple-choice",
-      "question": "¿Cómo ves el futuro de la IA generativa en los próximos 5 años?",
-      "options": [
-        { "value": "muy_optimista", "text": "Muy optimista - Revolucionará positivamente muchos aspectos de la vida" },
-        { "value": "optimista", "text": "Optimista - Traerá más beneficios que problemas" },
-        { "value": "neutral", "text": "Neutral - Habrá tanto beneficios como desafíos" },
-        { "value": "preocupado", "text": "Preocupado - Los riesgos superan los beneficios" },
-        { "value": "muy_preocupado", "text": "Muy preocupado - Podría tener consecuencias negativas graves" }
-      ]
-    },
-    {
-      "id": 10,
-      "type": "text",
-      "question": "¿Hay algo más que te gustaría compartir sobre tu experiencia o perspectiva respecto a la IA generativa?",
-      "placeholder": "Comparte tus pensamientos, experiencias o cualquier comentario adicional..."
-    }
-  ]
+  "survey": {
+    "title": "Encuesta sobre IA Generativa",
+    "description": "Análisis de perspectivas sobre Inteligencia Artificial Generativa",
+    "version": "1.0",
+    "questions": [
+      {
+        "id": 1,
+        "type": "radio",
+        "required": true,
+        "question": "¿Cuál es tu nivel de familiaridad con la IA Generativa?",
+        "options": [
+          "Nunca he usado IA generativa",
+          "He probado algunas herramientas básicas",
+          "Uso IA generativa ocasionalmente",
+          "Uso IA generativa regularmente",
+          "Soy experto/a en IA generativa"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "checkbox",
+        "required": true,
+        "question": "¿Qué herramientas de IA generativa has utilizado?",
+        "options": [
+          "ChatGPT (OpenAI)",
+          "Claude (Anthropic)",
+          "Gemini (Google)",
+          "GitHub Copilot",
+          "DALL-E / Midjourney",
+          "Otra herramienta",
+          "Ninguna"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "radio",
+        "required": true,
+        "question": "¿En qué sector trabajas principalmente?",
+        "options": [
+          "Tecnología y Software",
+          "Educación",
+          "Marketing y Publicidad",
+          "Salud y Medicina",
+          "Finanzas",
+          "Arte y Creatividad",
+          "Investigación",
+          "Otro"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "radio",
+        "required": true,
+        "question": "¿Con qué frecuencia utilizas IA generativa?",
+        "options": [
+          "Diariamente",
+          "Varias veces por semana",
+          "Una vez por semana",
+          "Varias veces al mes",
+          "Raramente",
+          "Nunca"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "checkbox",
+        "required": true,
+        "question": "¿Para qué tareas principales utilizas la IA generativa?",
+        "options": [
+          "Generación de texto y contenido",
+          "Programación y desarrollo",
+          "Diseño y creatividad",
+          "Análisis de datos",
+          "Traducción",
+          "Investigación",
+          "Educación y aprendizaje",
+          "Automatización de tareas"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "radio",
+        "required": true,
+        "question": "¿Cuál consideras el principal beneficio de la IA generativa?",
+        "options": [
+          "Aumento de productividad",
+          "Creatividad potenciada",
+          "Acceso democratizado a herramientas avanzadas",
+          "Automatización de tareas repetitivas",
+          "Aprendizaje y educación mejorados",
+          "Reducción de costos"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "radio",
+        "required": true,
+        "question": "¿Cuál es tu principal preocupación sobre la IA generativa?",
+        "options": [
+          "Pérdida de empleos",
+          "Problemas de privacidad",
+          "Información incorrecta o sesgada",
+          "Dependencia excesiva de la tecnología",
+          "Falta de creatividad humana",
+          "Aspectos éticos y de responsabilidad"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "radio",
+        "required": true,
+        "question": "¿En qué área crees que la IA generativa tendrá mayor impacto?",
+        "options": [
+          "Educación",
+          "Salud y medicina",
+          "Entretenimiento y medios",
+          "Programación y desarrollo",
+          "Arte y diseño",
+          "Investigación científica",
+          "Atención al cliente"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "radio",
+        "required": true,
+        "question": "¿Estarías dispuesto/a a pagar por herramientas de IA generativa premium?",
+        "options": [
+          "Sí, ya pago por algunas",
+          "Sí, consideraría pagar",
+          "Tal vez, dependiendo del precio",
+          "No, prefiero opciones gratuitas",
+          "No, no veo el valor",
+          "No estoy seguro/a"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "textarea",
+        "required": false,
+        "question": "¿Tienes algún comentario adicional sobre la IA generativa?",
+        "placeholder": "Comparte tus pensamientos, experiencias o predicciones sobre el futuro de la IA generativa..."
+      }
+    ]
+  }
 }

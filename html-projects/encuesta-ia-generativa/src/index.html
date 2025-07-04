@@ -9,18 +9,16 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
 </head>
 <body>
-    <!-- Elementos flotantes para el fondo -->
-    <div class="floating-elements"></div>
-    
     <!-- Container principal -->
     <div class="container">
-        <!-- Header con controles avanzados -->
+        <!-- Header con controles completos -->
         <header>
             <div class="header-controls">
                 <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema oscuro/claro">
                     🌙
                 </button>
                 
+                <!-- Selector de idioma agregado -->
                 <div class="language-selector">
                     <button class="language-toggle" id="languageToggle" aria-label="Seleccionar idioma">
                         🌐 ES
@@ -46,7 +44,7 @@
         <!-- Formulario principal de la encuesta -->
         <form class="survey-form" id="surveyForm" role="form" aria-label="Encuesta sobre IA Generativa">
             <div class="survey-container">
-                <!-- Sección de progreso compacta -->
+                <!-- Sección de progreso -->
                 <div class="progress-section">
                     <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso de la encuesta">
                         <div class="progress-fill" id="progressFill">
@@ -58,7 +56,7 @@
                     </div>
                 </div>
                 
-                <!-- Contador de preguntas compacto -->
+                <!-- Contador de preguntas -->
                 <div class="question-counter">
                     <span class="counter-label">Pregunta</span>
                     <span id="currentQuestion">1</span> 
@@ -66,7 +64,7 @@
                     <span id="totalQuestions">10</span>
                 </div>
 
-                <!-- Container dinámico para diferentes tipos de preguntas -->
+                <!-- Container dinámico para preguntas -->
                 <fieldset class="question-container" id="questionContainer">
                     <legend class="sr-only">Pregunta de la encuesta</legend>
                     
@@ -80,11 +78,9 @@
                             <div class="placeholder-option"></div>
                         </div>
                     </div>
-                    
-                    <!-- Aquí se cargarán dinámicamente las preguntas -->
                 </fieldset>
 
-                <!-- Área de validación de errores -->
+                <!-- Validación de errores -->
                 <div class="validation-container" id="validationContainer" role="alert" aria-live="polite">
                     <div class="validation-message" id="validationMessage" style="display: none;" aria-hidden="true">
                         <span class="validation-icon">⚠️</span>
@@ -100,7 +96,6 @@
                     </button>
 
                     <div class="navigation-center">
-                        <!-- Indicador de preguntas opcionales -->
                         <span class="optional-indicator" id="optionalIndicator" style="display: none;">
                             Pregunta opcional
                         </span>
@@ -119,63 +114,63 @@
             </div>
         </form>
 
-        <!-- Container de resultados con opciones avanzadas -->
+        <!-- Container de resultados con funcionalidad de descarga -->
         <div class="results-container" id="resultsContainer" style="display: none;" role="region" aria-label="Resultados de la encuesta">
             <div class="results-header">
                 <h2>📊 Resultados de tu Encuesta</h2>
                 <p class="results-subtitle">Análisis personalizado basado en tus respuestas</p>
-            </div>
-
-            <!-- Controles de exportación y compartir -->
-            <div class="export-share-controls">
-                <div class="export-dropdown">
-                    <button class="btn btn-export" id="exportBtn" aria-label="Exportar resultados">
-                        <span class="btn-icon">📊</span>
-                        <span class="btn-text">Exportar</span>
-                    </button>
-                    <div class="dropdown-menu" id="exportMenu">
-                        <a href="#" class="dropdown-item" data-format="pdf">
-                            📄 Descargar PDF
-                        </a>
-                        <a href="#" class="dropdown-item" data-format="image">
-                            🖼️ Guardar Imagen
-                        </a>
-                        <a href="#" class="dropdown-item" data-format="json">
-                            💾 Datos JSON
-                        </a>
+                
+                <!-- Controles de exportación y compartir agregados -->
+                <div class="export-share-controls">
+                    <div class="export-dropdown">
+                        <button class="btn btn-export" id="exportBtn" aria-label="Exportar resultados">
+                            <span class="btn-icon">📊</span>
+                            <span class="btn-text">Exportar</span>
+                        </button>
+                        <div class="dropdown-menu" id="exportMenu">
+                            <a href="#" class="dropdown-item" data-format="pdf">
+                                📄 Descargar PDF
+                            </a>
+                            <a href="#" class="dropdown-item" data-format="image">
+                                🖼️ Guardar Imagen
+                            </a>
+                            <a href="#" class="dropdown-item" data-format="json">
+                                💾 Datos JSON
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <div class="share-dropdown">
-                    <button class="btn btn-share" id="shareBtn" aria-label="Compartir resultados">
-                        <span class="btn-icon">🔗</span>
-                        <span class="btn-text">Compartir</span>
-                    </button>
-                    <div class="dropdown-menu" id="shareMenu">
-                        <a href="#" class="dropdown-item" data-platform="link">
-                            🔗 Copiar enlace
-                        </a>
-                        <a href="#" class="dropdown-item" data-platform="email">
-                            📧 Enviar por email
-                        </a>
-                        <div class="social-share-buttons">
-                            <a href="#" class="social-btn twitter" aria-label="Compartir en Twitter">🐦</a>
-                            <a href="#" class="social-btn linkedin" aria-label="Compartir en LinkedIn">💼</a>
-                            <a href="#" class="social-btn whatsapp" aria-label="Compartir en WhatsApp">💬</a>
-                            <a href="#" class="social-btn telegram" aria-label="Compartir en Telegram">✈️</a>
+                    <div class="share-dropdown">
+                        <button class="btn btn-share" id="shareBtn" aria-label="Compartir resultados">
+                            <span class="btn-icon">🔗</span>
+                            <span class="btn-text">Compartir</span>
+                        </button>
+                        <div class="dropdown-menu" id="shareMenu">
+                            <a href="#" class="dropdown-item" data-platform="link">
+                                🔗 Copiar enlace
+                            </a>
+                            <a href="#" class="dropdown-item" data-platform="email">
+                                📧 Enviar por email
+                            </a>
+                            <div class="social-share-buttons">
+                                <a href="#" class="social-btn twitter" aria-label="Compartir en Twitter">🐦</a>
+                                <a href="#" class="social-btn linkedin" aria-label="Compartir en LinkedIn">💼</a>
+                                <a href="#" class="social-btn whatsapp" aria-label="Compartir en WhatsApp">💬</a>
+                                <a href="#" class="social-btn telegram" aria-label="Compartir en Telegram">✈️</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Contenido de resultados que se llenará dinámicamente -->
+            <!-- Contenido de resultados -->
             <div id="resultsContent">
                 <!-- Los resultados se generarán aquí con JavaScript -->
             </div>
 
-            <!-- Acciones de resultados -->
+            <!-- Acciones de resultados con botón corregido -->
             <div class="results-actions">
-                <button class="btn btn-secondary" id="restartBtn" aria-label="Reiniciar encuesta">
+                <button class="btn btn-secondary" id="restartBtn" type="button" aria-label="Reiniciar encuesta">
                     <span class="btn-icon">🔄</span>
                     <span class="btn-text">Realizar de nuevo</span>
                 </button>
@@ -188,13 +183,194 @@
         </div>
     </div>
 
-    <!-- Notificaciones Toast -->
+    <!-- Notificaciones Toast agregadas -->
     <div id="toastContainer" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- Scripts -->
-    <script src="data/questions.json" type="application/json"></script>
+    <!-- Scripts corregidos -->
     <script src="js/survey.js"></script>
     <script src="js/results.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- CSS adicional para nuevos elementos -->
+    <style>
+        /* Estilos para selector de idioma */
+        .language-selector {
+            position: relative;
+            display: inline-block;
+            margin-left: 12px;
+        }
+
+        .language-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            font-size: 14px;
+        }
+
+        .language-option:hover {
+            background-color: #f7fafc;
+        }
+
+        .language-option.active {
+            background-color: #667eea;
+            color: white;
+        }
+
+        /* Estilos para controles de exportación */
+        .export-share-controls {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .export-dropdown, .share-dropdown {
+            position: relative;
+        }
+
+        .btn-export, .btn-share {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-export:hover, .btn-share:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            min-width: 180px;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #4a5568;
+            transition: background-color 0.2s ease;
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+
+        .social-share-buttons {
+            display: flex;
+            gap: 8px;
+            padding: 12px 16px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .social-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Toast container */
+        #toastContainer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        /* Dark theme adjustments */
+        [data-theme="dark"] .language-dropdown,
+        [data-theme="dark"] .dropdown-menu {
+            background: #2d3748;
+            border-color: #4a5568;
+            color: white;
+        }
+
+        [data-theme="dark"] .language-option:hover,
+        [data-theme="dark"] .dropdown-item:hover {
+            background-color: #4a5568;
+        }
+
+        [data-theme="dark"] .dropdown-item {
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .social-share-buttons {
+            border-top-color: #4a5568;
+        }
+    </style>
 </body>
 </html>
