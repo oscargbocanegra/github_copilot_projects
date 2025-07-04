@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta: IA Generativa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Encuesta sobre IA Generativa</h1>
+            <p>Ayúdanos a entender cómo percibe la sociedad la Inteligencia Artificial Generativa</p>
+        </header>
+
+        <div class="survey-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            
+            <div class="question-counter">
+                <span id="currentQuestion">1</span> de <span id="totalQuestions">10</span>
+            </div>
+
+            <div class="question-container" id="questionContainer">
+                <!-- Las preguntas se cargarán dinámicamente aquí -->
+            </div>
+
+            <div class="navigation">
+                <button id="prevBtn" class="btn btn-secondary" disabled>Anterior</button>
+                <button id="nextBtn" class="btn btn-primary">Siguiente</button>
+                <button id="submitBtn" class="btn btn-success" style="display: none;">Enviar Encuesta</button>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer" style="display: none;">
+            <h2>📊 Resultados de tu Encuesta</h2>
+            <div id="resultsContent"></div>
+            <button id="restartBtn" class="btn btn-primary">Realizar Encuesta Nuevamente</button>
+        </div>
+    </div>
+
+    <script src="js/survey.js"></script>
+    <script src="js/results.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
