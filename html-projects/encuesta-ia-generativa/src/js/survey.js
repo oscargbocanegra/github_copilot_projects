@@ -18,7 +18,29 @@ class Survey {
             this.updateQuestionCounter();
         } catch (error) {
             console.error('Error loading questions:', error);
+            // Fallback con preguntas predefinidas si falla la carga
+            this.loadFallbackQuestions();
         }
+    }
+
+    loadFallbackQuestions() {
+        this.questions = [
+            {
+                id: 1,
+                type: "multiple-choice",
+                question: "¿Qué tan familiarizado/a estás con la IA generativa?",
+                options: [
+                    { value: "muy_familiarizado", text: "Muy familiarizado - La uso frecuentemente" },
+                    { value: "algo_familiarizado", text: "Algo familiarizado - La he probado varias veces" },
+                    { value: "poco_familiarizado", text: "Poco familiarizado - Solo he oído hablar de ella" },
+                    { value: "nada_familiarizado", text: "Nada familiarizado - Es la primera vez que escucho el término" }
+                ]
+            }
+            // ... más preguntas predefinidas si es necesario
+        ];
+        this.renderQuestion();
+        this.updateProgress();
+        this.updateQuestionCounter();
     }
 
     renderQuestion() {
@@ -48,7 +70,7 @@ class Survey {
             optionsHtml = `
                 <textarea class="text-input" 
                           name="question_${question.id}" 
-                          placeholder="${question.placeholder}"
+                          placeholder="${question.placeholder || 'Escribe tu respuesta aquí...'}"
                           rows="6">${this.answers[question.id] || ''}</textarea>
             `;
         }
@@ -63,6 +85,11 @@ class Survey {
         // Add event listeners
         this.addEventListeners();
         this.updateNavigationButtons();
+        
+        // Ocultar mensaje de validación al cargar nueva pregunta
+        if (window.hideValidationMessage) {
+            window.hideValidationMessage();
+        }
     }
 
     addEventListeners() {
@@ -113,14 +140,38 @@ class Survey {
     }
 
     updateProgress() {
+        // Actualizar progress bar usando la función global
+        if (window.updateProgressBar) {
+            window.updateProgressBar(this.currentQuestionIndex + 1, this.questions.length);
+        }
+        
+        // Fallback si la función global no está disponible
         const progressFill = document.getElementById('progressFill');
-        const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
-        progressFill.style.width = `${progress}%`;
+        const progressPercentage = document.getElementById('progressPercentage');
+        const progressBar = document.querySelector('.progress-bar');
+        
+        if (progressFill && progressPercentage) {
+            const percentage = Math.round(((this.currentQuestionIndex + 1) / this.questions.length) * 100);
+            progressFill.style.width = `${percentage}%`;
+            progressPercentage.textContent = `${percentage}%`;
+            
+            if (progressBar) {
+                progressBar.setAttribute('aria-valuenow', percentage);
+            }
+        }
     }
 
     updateQuestionCounter() {
-        document.getElementById('currentQuestion').textContent = this.currentQuestionIndex + 1;
-        document.getElementById('totalQuestions').textContent = this.questions.length;
+        const currentElement = document.getElementById('currentQuestion');
+        const totalElement = document.getElementById('totalQuestions');
+        
+        if (currentElement) {
+            currentElement.textContent = this.currentQuestionIndex + 1;
+        }
+        
+        if (totalElement) {
+            totalElement.textContent = this.questions.length;
+        }
     }
 
     updateNavigationButtons() {
@@ -129,20 +180,26 @@ class Survey {
         const submitBtn = document.getElementById('submitBtn');
 
         // Previous button
-        prevBtn.disabled = this.currentQuestionIndex === 0;
+        if (prevBtn) {
+            prevBtn.disabled = this.currentQuestionIndex === 0;
+        }
 
         // Next/Submit button
         const isLastQuestion = this.currentQuestionIndex === this.questions.length - 1;
         const hasAnswer = this.hasCurrentAnswer();
 
         if (isLastQuestion) {
-            nextBtn.style.display = 'none';
-            submitBtn.style.display = 'inline-block';
-            submitBtn.disabled = !hasAnswer;
+            if (nextBtn) nextBtn.style.display = 'none';
+            if (submitBtn) {
+                submitBtn.style.display = 'inline-flex';
+                submitBtn.disabled = !hasAnswer;
+            }
         } else {
-            nextBtn.style.display = 'inline-block';
-            submitBtn.style.display = 'none';
-            nextBtn.disabled = !hasAnswer;
+            if (nextBtn) {
+                nextBtn.style.display = 'inline-flex';
+                nextBtn.disabled = !hasAnswer;
+            }
+            if (submitBtn) submitBtn.style.display = 'none';
         }
     }
 
@@ -158,11 +215,21 @@ class Survey {
     }
 
     nextQuestion() {
+        if (!this.hasCurrentAnswer()) {
+            if (window.showValidationMessage) {
+                window.showValidationMessage('Por favor, selecciona una respuesta antes de continuar.');
+            }
+            return;
+        }
+
         if (this.currentQuestionIndex < this.questions.length - 1) {
             this.currentQuestionIndex++;
             this.renderQuestion();
             this.updateProgress();
             this.updateQuestionCounter();
+            
+            // Scroll to top suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
@@ -172,12 +239,26 @@ class Survey {
             this.renderQuestion();
             this.updateProgress();
             this.updateQuestionCounter();
+            
+            // Scroll to top suavemente
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
     submitSurvey() {
+        if (!this.hasCurrentAnswer()) {
+            if (window.showValidationMessage) {
+                window.showValidationMessage('Por favor, completa la respuesta antes de enviar.');
+            }
+            return;
+        }
+
         if (Object.keys(this.answers).length === this.questions.length) {
             this.showResults();
+        } else {
+            if (window.showValidationMessage) {
+                window.showValidationMessage('Por favor, responde todas las preguntas antes de enviar.');
+            }
         }
     }
 
@@ -187,6 +268,9 @@ class Survey {
         
         const resultsManager = new Results(this.answers, this.questions);
         resultsManager.displayResults();
+        
+        // Scroll to top suavemente
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     restart() {
@@ -197,6 +281,9 @@ class Survey {
         this.renderQuestion();
         this.updateProgress();
         this.updateQuestionCounter();
+        
+        // Scroll to top suavemente
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 }
 
