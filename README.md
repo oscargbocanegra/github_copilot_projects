@@ -262,7 +262,7 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 ### ✅ Fase 3: Aplicaciones Complejas (Completada)
 - [x] **Encuesta IA**: Análisis de datos y exportación
 - [x] **Internacionalización**: Soporte multiidioma
-- [x] **Temas dinámicos**: Modo oscuro/claro
+- [x] **Temas dinámicos**: Modo oscuro/claro.
 
 ---
 
