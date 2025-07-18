@@ -283,6 +283,7 @@ Mejora la accesibilidad de la calculadora:
 - [X] Manejo de errores amigable
 
 ### Fase 4: Pulimento
+
 - [X] Responsive design completo
 - [X] Accesibilidad básica
 - [X] Testing de casos edge
