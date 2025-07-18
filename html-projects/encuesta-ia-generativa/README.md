@@ -1,6 +1,8 @@
 # 🤖 Encuesta Interactiva sobre IA Generativa
 
-Una encuesta web moderna e interactiva diseñada para recopilar opiniones, experiencias y perspectivas sobre la Inteligencia Artificial Generativa. El proyecto utiliza tecnologías web estándar (HTML5, CSS3, JavaScript ES6) para ofrecer una experiencia de usuario fluida y atractiva.
+Una encuesta web moderna e interactiva diseñada para recopilar opiniones, experiencias y perspectivas sobre la
+Inteligencia Artificial Generativa. El proyecto utiliza tecnologías web estándar (HTML5, CSS3, JavaScript ES6)
+para ofrecer una experiencia de usuario fluida y atractiva.
 
 ## ✨ Características Principales
 
@@ -13,7 +15,7 @@ Una encuesta web moderna e interactiva diseñada para recopilar opiniones, exper
 
 ## 🏗️ Estructura del Proyecto
 
-```
+```text
 encuesta-ia-generativa/
 ├── src/
 │   ├── index.html              # Página principal de la encuesta
@@ -33,10 +35,12 @@ encuesta-ia-generativa/
 ## 🚀 Instalación y Uso
 
 ### Requisitos Previos
+
 - Navegador web moderno (Chrome, Firefox, Safari, Edge)
 - Servidor web local (opcional, recomendado para evitar errores CORS)
 
 ### Ejecución Rápida
+
 ```bash
 # 1. Clona el repositorio
 git clone [url-del-repositorio]
@@ -57,6 +61,7 @@ npx serve .
 ```
 
 ### Acceso
+
 - Servidor local: `http://localhost:8000/src/`
 - Directamente: Abrir `src/index.html` en el navegador
 
@@ -78,12 +83,14 @@ La encuesta incluye 10 preguntas estratégicamente diseñadas:
 ## 🎨 Características de Diseño
 
 ### Paleta de Colores
+
 - **Primarios**: Gradientes azul-púrpura (#667eea → #764ba2)
 - **Secundarios**: Rosa-coral (#f093fb → #f5576c)
 - **Éxito**: Cian-azul (#4facfe → #00f2fe)
 - **Advertencia**: Verde (#43e97b → #38f9d7)
 
 ### Efectos Visuales
+
 - **Animaciones CSS**: Transiciones suaves y micro-interacciones
 - **Glassmorphism**: Efectos de vidrio esmerilado
 - **Gradientes Dinámicos**: Fondos animados y elementos con profundidad
@@ -93,11 +100,13 @@ La encuesta incluye 10 preguntas estratégicamente diseñadas:
 ## 🛠️ Tecnologías Utilizadas
 
 ### Frontend
+
 - **HTML5**: Estructura semántica y accesible
 - **CSS3**: Flexbox, Grid, Custom Properties, Animations
 - **JavaScript ES6+**: Clases, Async/Await, Modules
 
 ### Características Técnicas
+
 - **Responsive Design**: Mobile-first approach
 - **Progressive Enhancement**: Funcionalidad básica sin JavaScript
 - **Accesibilidad**: Navegación por teclado y lectores de pantalla
@@ -108,6 +117,7 @@ La encuesta incluye 10 preguntas estratégicamente diseñadas:
 El sistema de análisis proporciona:
 
 ### Análisis Personalizado
+
 - **Perfil de Usuario**: Basado en familiaridad y uso
 - **Patrones de Comportamiento**: Frecuencia y propósitos
 - **Perspectiva de Beneficios**: Evaluación de ventajas percibidas
@@ -115,6 +125,7 @@ El sistema de análisis proporciona:
 - **Visión Futura**: Clasificación de optimismo/pesimismo
 
 ### Métricas Incluidas
+
 - Nivel de adopción tecnológica
 - Categorización de usuario (Novato/Intermedio/Avanzado)
 - Perfil de riesgo percibido
@@ -123,7 +134,9 @@ El sistema de análisis proporciona:
 ## 🔧 Personalización
 
 ### Modificar Preguntas
+
 Edita `src/data/questions.json`:
+
 ```json
 {
   "id": 11,
@@ -136,7 +149,9 @@ Edita `src/data/questions.json`:
 ```
 
 ### Personalizar Estilos
+
 Modifica las variables CSS en `src/css/styles.css`:
+
 ```css
 :root {
   --primary-gradient: linear-gradient(135deg, #tu-color1, #tu-color2);
@@ -145,6 +160,7 @@ Modifica las variables CSS en `src/css/styles.css`:
 ```
 
 ### Extender Funcionalidad
+
 - **Nuevos tipos de pregunta**: Escala Likert, selección múltiple
 - **Exportación de datos**: CSV, JSON, PDF
 - **Integración con APIs**: Almacenamiento en base de datos
@@ -153,17 +169,20 @@ Modifica las variables CSS en `src/css/styles.css`:
 ## 🌐 Compatibilidad
 
 ### Navegadores Soportados
+
 - ✅ Chrome 80+
 - ✅ Firefox 75+
 - ✅ Safari 13+
 - ✅ Edge 80+
 
 ### Dispositivos
+
 - 📱 **Móviles**: iOS Safari, Chrome Mobile, Samsung Internet
 - 💻 **Desktop**: Todos los navegadores modernos
 - 📟 **Tablets**: Optimizado para pantallas medianas
 
 ### Áreas Corregidas en esta Versión
+
 - ✅ **Inicialización consistente**: Sistema unificado de inicialización
 - ✅ **Referencias DOM corregidas**: Todos los IDs referenciados existen en HTML
 - ✅ **Scripts simplificados**: Eliminadas dependencias circulares
@@ -174,6 +193,7 @@ Modifica las variables CSS en `src/css/styles.css`:
 - ✅ **Theme switching funcional**: Sistema de temas simplificado
 
 ### Próximas Mejoras
+
 - [ ] Modo oscuro/claro avanzado
 - [ ] Exportación de resultados (PDF, JSON)
 - [ ] Internacionalización completa
@@ -185,12 +205,14 @@ Modifica las variables CSS en `src/css/styles.css`:
 ## 📈 Roadmap
 
 ### Versión 2.0
+
 - **Análisis Avanzado**: Comparación con otros usuarios
 - **Dashboard Admin**: Panel de control para administradores
 - **API REST**: Backend para almacenamiento de datos
 - **Machine Learning**: Análisis predictivo de respuestas
 
 ### Versión 2.1
+
 - **Gamificación**: Sistema de puntos y logros
 - **Social Sharing**: Compartir resultados en redes sociales
 - **Reportes Avanzados**: Gráficos interactivos

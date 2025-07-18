@@ -4,7 +4,7 @@ Una calculadora moderna y funcional desarrollada con HTML, CSS y JavaScript vani
 
 ## 📁 Estructura del Proyecto
 
-```md
+```text
 calculadora/
 ├── index.html                    # Versión básica funcional
 ├── index-semantico.html          # Versión semántica con accesibilidad
@@ -215,7 +215,7 @@ axe http://localhost:8000/index-semantico.html
 
 ## 📚 Prompts de GitHub Copilot Utilizados
 
-```md
+```markdown
 6. "Desarrolla una estructura HTML5 semántica para calculadora que incluya:
    - Container principal con clase 'calculator'
    - Display input con ID único para JavaScript

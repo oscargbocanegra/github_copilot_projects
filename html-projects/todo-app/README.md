@@ -5,6 +5,7 @@ Una aplicación moderna de gestión de tareas con interfaz tipo Kanban, construi
 ## ✨ Características
 
 ### 🎯 **Funcionalidades Core**
+
 - **Tablero Kanban** con 3 columnas (To Do, Doing, Done)
 - **Drag & Drop** para mover tareas entre columnas
 - **Agregar tareas** con formulario intuitivo
@@ -14,6 +15,7 @@ Una aplicación moderna de gestión de tareas con interfaz tipo Kanban, construi
 - **Contadores** de tareas por columna automáticos
 
 ### 🚀 **Funcionalidades Avanzadas**
+
 - **🌙 Modo oscuro** con toggle persistente
 - **🏷️ Sistema de prioridades** (Alta, Media, Baja) con colores
 - **👥 Gestión de usuarios** y asignación de tareas
@@ -26,6 +28,7 @@ Una aplicación moderna de gestión de tareas con interfaz tipo Kanban, construi
 - **🔔 Sistema de notificaciones** toast
 
 ### 🎨 **Experiencia de Usuario**
+
 - **📱 Diseño responsivo** para todos los dispositivos
 - **🎭 Interfaz profesional** con animaciones suaves
 - **⌨️ Atajos de teclado** (Ctrl+N para nueva tarea)
@@ -34,7 +37,7 @@ Una aplicación moderna de gestión de tareas con interfaz tipo Kanban, construi
 
 ## 🏗️ Estructura del Proyecto
 
-```
+```text
 todo-app/
 ├── src/
 │   ├── index.html          # Página principal con estructura Kanban avanzada
@@ -53,12 +56,14 @@ todo-app/
 ### Instalación Local
 
 1. **Clona el repositorio:**
+
    ```bash
    git clone <URL_DEL_REPOSITORIO>
    cd todo-app
    ```
 
 2. **Abre la aplicación:**
+
    ```bash
    # Opción 1: Abrir directamente en el navegador
    open src/index.html
@@ -71,12 +76,14 @@ todo-app/
 ### Uso de la Aplicación
 
 #### 📝 **Gestión de Tareas Básica**
+
 - **Agregar tarea**: Completa el formulario y presiona "Agregar Tarea"
 - **Mover tarea**: Arrastra entre columnas o usa los botones de acción
 - **Eliminar tarea**: Haz clic en el botón 🗑️ (aparece confirmación)
 - **Editar tarea**: Haz clic en el texto para editar in-situ
 
-#### 🚀 **Funcionalidades Avanzadas**
+#### 🎮 **Uso de Funcionalidades Avanzadas**
+
 - **Prioridades**: Selecciona Alta 🔴, Media 🟡 o Baja 🟢
 - **Asignación**: Asigna tareas a usuarios específicos
 - **Fechas límite**: Establece fechas de vencimiento
@@ -86,6 +93,7 @@ todo-app/
 - **Estadísticas**: Panel detallado con métricas del tablero
 
 #### ⌨️ **Atajos de Teclado**
+
 - `Ctrl + N` (o `Cmd + N`): Enfocar campo de nueva tarea
 - `Ctrl + E` (o `Cmd + E`): Exportar tareas a JSON
 - `Ctrl + D` (o `Cmd + D`): Toggle modo oscuro
@@ -93,6 +101,7 @@ todo-app/
 - `Escape`: Cancelar edición de tarea
 
 #### 🎮 **Funciones de Consola (Desarrolladores)**
+
 ```javascript
 // Agregar tareas de ejemplo
 KanbanDemo.addSampleTasks()
@@ -113,6 +122,7 @@ TemplateManager.addTemplate('Reunión semanal', 'high', 'proyecto')
 ## 🎨 Diseño y UX
 
 ### **Características Visuales**
+
 - **Modo claro/oscuro** con transiciones suaves
 - **Paleta de colores** moderna y accesible
 - **Tipografía Inter** optimizada para legibilidad
@@ -121,16 +131,19 @@ TemplateManager.addTemplate('Reunión semanal', 'high', 'proyecto')
 - **Estados hover/focus** refinados para mejor UX
 
 ### **Sistema de Prioridades**
+
 - 🔴 **Alta**: Tareas urgentes e importantes
 - 🟡 **Media**: Tareas importantes no urgentes  
 - 🟢 **Baja**: Tareas de mantenimiento o futuras
 
 ### **Estados de Tareas**
+
 - 🔴 **To Do**: Tareas pendientes por iniciar
 - 🟡 **Doing**: Tareas en desarrollo activo
 - 🟢 **Done**: Tareas completadas exitosamente
 
 ### **Responsive Design**
+
 - **Desktop** (>1024px): Vista completa con todas las funcionalidades
 - **Tablet** (768-1024px): Diseño adaptativo con barra lateral colapsable
 - **Mobile** (<768px): Vista optimizada con navegación touch
@@ -147,6 +160,7 @@ TemplateManager.addTemplate('Reunión semanal', 'high', 'proyecto')
 ## 📊 Funcionalidades Técnicas
 
 ### **Gestión Avanzada de Datos**
+
 ```javascript
 // Estructura de tarea extendida
 {
@@ -162,6 +176,7 @@ TemplateManager.addTemplate('Reunión semanal', 'high', 'proyecto')
 ```
 
 ### **Sistema de Usuarios**
+
 ```javascript
 // Gestión de usuarios del proyecto
 UserManager.addUser(name, email, role)
@@ -170,6 +185,7 @@ UserManager.getWorkload(userId)
 ```
 
 ### **Templates y Automatización**
+
 ```javascript
 // Templates reutilizables
 TemplateManager.createTemplate(name, priority, defaultTags)
@@ -177,6 +193,7 @@ TemplateManager.applyTemplate(templateId, customizations)
 ```
 
 ### **Persistencia y Sincronización**
+
 - **localStorage** para datos locales
 - **API sync** para sincronización externa
 - **Backup automático** con versionado
@@ -185,6 +202,7 @@ TemplateManager.applyTemplate(templateId, customizations)
 ## 🔄 API y Sincronización
 
 ### **Endpoints de Sincronización**
+
 ```javascript
 // Configuración de API externa
 const API_CONFIG = {
@@ -198,6 +216,7 @@ const API_CONFIG = {
 ```
 
 ### **Flujo de Sincronización**
+
 1. **Detección de cambios** locales
 2. **Resolución de conflictos** automática
 3. **Merge inteligente** de datos
@@ -214,6 +233,7 @@ Las contribuciones son bienvenidas. Para contribuir:
 5. **Abre** un Pull Request
 
 ### **Ideas para Contribuir**
+
 - 🔔 **Sistema de notificaciones** push y por email
 - 📈 **Dashboard** con métricas avanzadas y gráficos
 - 🔍 **Búsqueda global** con filtros complejos
@@ -224,6 +244,7 @@ Las contribuciones son bienvenidas. Para contribuir:
 - 🔐 **Autenticación** y permisos por rol
 
 ### **Roadmap Planificado**
+
 - [ ] Colaboración en tiempo real
 - [ ] Comentarios y adjuntos en tareas
 - [ ] Integración con calendarios
@@ -255,6 +276,7 @@ Si encuentras algún problema o tienes sugerencias:
 **Nuevas características**: Modo oscuro, usuarios, prioridades, templates, API sync
 
 ### 📈 **Estadísticas del Proyecto**
+
 - **Líneas de código**: ~2000+ líneas
 - **Funcionalidades**: 15+ características principales
 - **Responsive breakpoints**: 3 tamaños principales

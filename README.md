@@ -22,7 +22,6 @@
 - [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
 - [📈 Roadmap de Aprendizaje](#-roadmap-de-aprendizaje)
 - [📄 Licencia](#-licencia)
-- [📄 Licencia](#-licencia)
 
 ---
 
@@ -120,7 +119,7 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 
 ## 📋 Estructura del Repositorio
 
-```md
+```text
 github_copilot_projects/
 ├── 📄 README.md                                    # Documentación principal
 ├── 📁 html-projects/                               # Proyectos de desarrollo web
@@ -274,7 +273,7 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 
 - [x] **Encuesta IA**: Análisis de datos y exportación
 - [x] **Internacionalización**: Soporte multiidioma
-- [x] **Temas dinámicos**: Modo oscuro/claro.
+- [x] **Temas dinámicos**: Modo oscuro/claro
 
 ---
 
@@ -318,7 +317,7 @@ Cada proyecto incluye un archivo `templates-y-prompts.md` con:
 
 Este proyecto está bajo la **Licencia MIT**.
 
-```md
+```text
 MIT License - Libre para uso educativo, personal y comercial
 Ver archivo LICENSE para detalles completos
 ```
@@ -329,6 +328,7 @@ Ver archivo LICENSE para detalles completos
 
 **Versión**: 1.0.0  
 **Última actualización**: Julio 2025  
-**Proyectos completados**: 3/3 ✅. .
+**Proyectos completados**: 3/3 ✅
 
+---
 ---

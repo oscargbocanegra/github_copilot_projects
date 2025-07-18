@@ -1,6 +1,7 @@
 # 📚 Templates y Prompts para GitHub Copilot - Proyecto Encuesta IA Generativa
 
-Guía completa de prompts utilizados y recomendados para crear una encuesta interactiva moderna sobre Inteligencia Artificial Generativa usando HTML, CSS y JavaScript con GitHub Copilot.
+Guía completa de prompts utilizados y recomendados para crear una encuesta interactiva moderna sobre
+Inteligencia Artificial Generativa usando HTML, CSS y JavaScript con GitHub Copilot.
 
 ## 📖 Índice
 
@@ -18,12 +19,14 @@ Guía completa de prompts utilizados y recomendados para crear una encuesta inte
 ## 🎯 Fundamentos de Prompting
 
 ### Anatomía de un Prompt Efectivo
-```
+
+```text
 [CONTEXTO] + [ACCIÓN ESPECÍFICA] + [REQUISITOS] + [FORMATO/ESTILO]
 ```
 
 **Ejemplo Práctico:**
-```
+
+```text
 En una encuesta sobre IA generativa, implementa un sistema de navegación 
 que incluya validación de respuestas, progress bar animada y botones 
 Previous/Next con estados disabled apropiados usando JavaScript ES6.
@@ -32,16 +35,19 @@ Previous/Next con estados disabled apropiados usando JavaScript ES6.
 ### Principios para Prompts de Calidad
 
 #### ✅ Buenos Prompts
+
 - **Específicos**: "Implementa validación que prevenga avance sin respuesta seleccionada"
 - **Contextuales**: "Para esta encuesta sobre IA generativa, crea análisis personalizado..."
 - **Técnicos**: "Diseña progress bar animada con gradiente CSS y transiciones suaves"
 
 #### ❌ Prompts Vagos
+
 - "Mejora la encuesta"
 - "Hazla más interactiva"
 - "Arregla los problemas"
 
 ### Estructura Recomendada
+
 1. **Contexto**: "En esta encuesta sobre IA generativa..."
 2. **Acción**: "Implementa/Mejora/Corrige..."
 3. **Especificación**: "...sistema de navegación con validación..."
@@ -75,7 +81,8 @@ Previous/Next con estados disabled apropiados usando JavaScript ES6.
 ### 🌐 Estructura HTML
 
 #### Prompt para HTML Semántico
-```
+
+```text
 Crea estructura HTML5 semántica para encuesta IA generativa:
 - Layout responsivo con containers flexibles
 - Formulario dinámico para preguntas múltiples  
@@ -87,7 +94,8 @@ Crea estructura HTML5 semántica para encuesta IA generativa:
 ```
 
 #### Prompt para Componentes Específicos
-```
+
+```text
 Desarrolla componentes HTML para encuesta interactiva:
 - Header con título atractivo y descripción clara
 - Container principal para preguntas dinámicas
@@ -101,7 +109,8 @@ Desarrolla componentes HTML para encuesta interactiva:
 ### 🎨 Diseño CSS
 
 #### Prompt de Sistema de Diseño
-```
+
+```text
 Implementa sistema de diseño moderno para encuesta IA:
 - Variables CSS para colores, espaciado y tipografía
 - Gradientes dinámicos azul-púrpura como primarios
@@ -114,7 +123,8 @@ Implementa sistema de diseño moderno para encuesta IA:
 ```
 
 #### Prompt de Interacciones Visuales
-```
+
+```text
 Mejora la experiencia visual con micro-interacciones:
 - Hover effects en opciones de respuesta con elevación
 - Button animations con feedback táctil
@@ -128,7 +138,8 @@ Mejora la experiencia visual con micro-interacciones:
 ### ⚙️ Lógica JavaScript
 
 #### Prompt de Clase Survey Principal
-```
+
+```text
 Implementa clase Survey completa en JavaScript ES6:
 - Constructor con inicialización asíncrona de preguntas
 - Método loadQuestions() con fallback a datos embebidos
@@ -141,7 +152,8 @@ Implementa clase Survey completa en JavaScript ES6:
 ```
 
 #### Prompt de Manejo de Estado
-```
+
+```text
 Desarrolla sistema de estado para encuesta interactiva:
 - Gestión centralizada de respuestas del usuario
 - Validación en tiempo real de campos obligatorios
@@ -155,7 +167,8 @@ Desarrolla sistema de estado para encuesta interactiva:
 ### 📊 Sistema de Resultados
 
 #### Prompt de Análisis Personalizado
-```
+
+```text
 Crea motor de análisis inteligente para encuesta IA:
 - Clasificación automática por nivel de familiaridad
 - Análisis de patrones de uso y comportamiento
@@ -168,7 +181,8 @@ Crea motor de análisis inteligente para encuesta IA:
 ```
 
 #### Prompt de Visualización de Resultados
-```
+
+```text
 Implementa presentación visual atractiva de resultados:
 - Cards de resumen con iconos y métricas clave
 - Sección de insights con tipos (positive, opportunity, insight)
@@ -187,8 +201,10 @@ Implementa presentación visual atractiva de resultados:
 ### Problemas Comunes y Prompts de Solución
 
 #### Elementos DOM No Encontrados
+
 **Problema**: `Cannot read property of undefined`
-```
+
+```text
 Corrige referencias a elementos DOM inexistentes:
 - Verificar existencia antes de agregar event listeners
 - Implementar fallbacks para elementos opcionales
@@ -198,8 +214,10 @@ Corrige referencias a elementos DOM inexistentes:
 ```
 
 #### Conflictos de Inicialización
+
 **Problema**: Múltiples clases intentando controlar la misma funcionalidad
-```
+
+```text
 Resuelve conflictos de arquitectura del proyecto:
 - Eliminar dependencias circulares entre archivos
 - Crear una sola fuente de verdad para el estado
@@ -209,8 +227,10 @@ Resuelve conflictos de arquitectura del proyecto:
 ```
 
 #### Progress Bar No Funcional
+
 **Problema**: Barra de progreso no se actualiza
-```
+
+```text
 Implementa sistema de progreso funcional:
 - Método updateProgressBar() en clase Survey
 - Cálculo de porcentaje basado en índice actual
@@ -222,7 +242,8 @@ Implementa sistema de progreso funcional:
 ### Prompts de Refactoring
 
 #### Simplificación de Código
-```
+
+```text
 Refactoriza el código para mejor mantenibilidad:
 - Extraer funciones utility reutilizables
 - Consolidar event listeners en métodos centralizados
@@ -233,7 +254,8 @@ Refactoriza el código para mejor mantenibilidad:
 ```
 
 #### Optimización de Performance
-```
+
+```text
 Optimiza el rendimiento de la encuesta:
 - Lazy loading de preguntas no inmediatas
 - Debounce en inputs de texto largo
@@ -250,7 +272,8 @@ Optimiza el rendimiento de la encuesta:
 ### Prompts de Análisis Avanzado
 
 #### Motor de Insights
-```
+
+```text
 Desarrolla sistema de insights inteligente:
 - Correlación entre familiaridad y optimismo sobre IA
 - Clustering de usuarios por patrones de respuesta
@@ -262,7 +285,8 @@ Desarrolla sistema de insights inteligente:
 ```
 
 #### Sistema de Recomendaciones
-```
+
+```text
 Implementa engine de recomendaciones personalizado:
 - Sugerencias de herramientas IA según uso actual
 - Recursos educativos adaptados a nivel de conocimiento
@@ -275,7 +299,8 @@ Implementa engine de recomendaciones personalizado:
 ### Prompts de Exportación
 
 #### Generación de Reportes
-```
+
+```text
 Crea sistema de exportación de resultados:
 - Generación de PDF con branding personalizado
 - Export a CSV para análisis estadístico
@@ -292,7 +317,8 @@ Crea sistema de exportación de resultados:
 ### Prompts de Experiencia de Usuario
 
 #### Flujo de Navegación
-```
+
+```text
 Optimiza el flujo de usuario en la encuesta:
 - Onboarding suave con introducción clara
 - Navegación intuitiva con breadcrumbs visuales
@@ -304,7 +330,8 @@ Optimiza el flujo de usuario en la encuesta:
 ```
 
 #### Accessibility y Inclusión
-```
+
+```text
 Implementa características de accesibilidad completas:
 - ARIA labels descriptivos para lectores de pantalla
 - Keyboard navigation fluida entre elementos
@@ -318,7 +345,8 @@ Implementa características de accesibilidad completas:
 ### Prompts de Animaciones
 
 #### Micro-interacciones
-```
+
+```text
 Diseña micro-interacciones que mejoren la experiencia:
 - Hover effects sutiles en elementos interactivos
 - Loading animations que comunican progreso
@@ -336,7 +364,8 @@ Diseña micro-interacciones que mejoren la experiencia:
 ### Prompts de Funcionalidades Premium
 
 #### Progressive Web App
-```
+
+```text
 Convierte la encuesta en PWA completa:
 - Service worker para funcionamiento offline
 - App manifest con iconos y branding
@@ -348,7 +377,8 @@ Convierte la encuesta en PWA completa:
 ```
 
 #### Internacionalización
-```
+
+```text
 Implementa soporte multi-idioma completo:
 - Sistema i18n con archivos de traducción JSON
 - Language selector con flags y nombres nativos
@@ -362,7 +392,8 @@ Implementa soporte multi-idioma completo:
 ### Prompts de Integraciones
 
 #### Analytics y Tracking
-```
+
+```text
 Integra analytics comprehensivo:
 - Google Analytics 4 con eventos personalizados
 - Heatmaps con Hotjar para análisis de comportamiento
@@ -374,7 +405,8 @@ Integra analytics comprehensivo:
 ```
 
 #### Plataformas Externas
-```
+
+```text
 Desarrolla integraciones con servicios externos:
 - CRM sync (Salesforce, HubSpot) para lead capture
 - Email marketing automation (Mailchimp, SendGrid)
@@ -391,6 +423,7 @@ Desarrolla integraciones con servicios externos:
 ### Estrategias de Prompting Efectivas
 
 #### Desarrollo por Capas
+
 1. **Capa 1 - Fundación**: HTML semántico y navegación básica
 2. **Capa 2 - Presentación**: Diseño visual y responsive layout  
 3. **Capa 3 - Interacción**: Sistema de preguntas y validación
@@ -398,6 +431,7 @@ Desarrolla integraciones con servicios externos:
 5. **Capa 5 - Polish**: Animaciones, UX refinado y optimización
 
 #### Iteración Progresiva
+
 - **Start simple**: Funcionalidad core primero
 - **Add complexity**: Características avanzadas gradualmente  
 - **Validate early**: Testing continuo en cada iteración
@@ -407,6 +441,7 @@ Desarrolla integraciones con servicios externos:
 ### Aplicabilidad de Prompts
 
 #### Tipos de Encuesta Adaptables
+
 - **Satisfacción del cliente**: NPS, escalas Likert, feedback cualitativo
 - **Market research**: Segmentación, buyer personas, pricing
 - **Evaluación educativa**: Assessments, pre/post training, learning styles
@@ -416,6 +451,7 @@ Desarrolla integraciones con servicios externos:
 ### Métricas de Éxito del Proyecto
 
 #### Características Implementadas
+
 - ✅ **10 preguntas estratégicas** sobre IA generativa
 - ✅ **Análisis personalizado** con 4 niveles de insights
 - ✅ **Diseño premium** con gradientes y animaciones fluidas
@@ -425,6 +461,7 @@ Desarrolla integraciones con servicios externos:
 - ✅ **Arquitectura escalable** para futuras características
 
 #### Lecciones Clave
+
 1. **Content drives design**: Las preguntas de calidad guían la UX
 2. **Progressive enhancement**: Construir funcionalidad incremental funciona
 3. **User-centric approach**: Validación y feedback visual son críticos
@@ -435,7 +472,8 @@ Desarrolla integraciones con servicios externos:
 
 **🎯 ¡Encuesta interactiva completamente funcional y documentada!**
 
-*Esta guía sirve como blueprint completo para crear encuestas profesionales usando GitHub Copilot de manera efectiva y sistemática.*
+*Esta guía sirve como blueprint completo para crear encuestas profesionales usando GitHub Copilot de
+manera efectiva y sistemática.*
 
 ---
 

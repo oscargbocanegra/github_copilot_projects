@@ -5,12 +5,14 @@ Registro completo de prompts utilizados y recomendados para crear una aplicació
 ## 🎯 Estructura de Prompts Efectivos
 
 ### 1. Anatomía de un Prompt Efectivo
-```
+
+```text
 [CONTEXTO] + [ACCIÓN ESPECÍFICA] + [REQUISITOS] + [FORMATO/ESTILO]
 ```
 
 **Ejemplo:**
-```
+
+```text
 Crea una lista de tareas con HTML y JavaScript que tenga visualización en formato Kanban con 3 columnas: To Do, Doing, Done, con funcionalidad drag & drop y persistencia local.
 ```
 
@@ -19,37 +21,44 @@ Crea una lista de tareas con HTML y JavaScript que tenga visualización en forma
 ### 🚀 Prompts Iniciales de Creación
 
 **1. Concepto Inicial:**
-```
+
+```text
 crear una lista de tareas con HTML y javascript
 ```
 
 **2. Especificación de Formato:**
-```
+
+```text
 necesito que la visualizacion sea en formato kanban. El tablero kanban debe tener 3 columnas: doing, to do, done. Ademas debo tener la opcion de poder crear nuevas tareas como ahora
 ```
 
 **3. Debugging Funcionalidad:**
-```
+
+```text
 no funciona el boton agregar tarea
 ```
 
 **4. Ajustes de Diseño:**
-```
+
+```text
 quiero un estilo mas profesional
 ```
 
 **5. Corrección de UX:**
-```
+
+```text
 el div que dice iniciar, completar, reiniciar no esta ajustado en tamaño
 ```
 
 **6. Documentación:**
-```
+
+```text
 actualiza el README acorde con el proyecto de todo-app
 ```
 
 **7. Template de Prompts:**
-```
+
+```text
 actualiza el archivo de templates y prompts acorde con el proyecto
 ```
 
@@ -58,7 +67,8 @@ actualiza el archivo de templates y prompts acorde con el proyecto
 #### Estructura HTML Kanban
 
 **Prompt Básico:**
-```
+
+```text
 Crea la estructura HTML5 para un tablero Kanban con:
 - Header con título y formulario para agregar tareas
 - 3 columnas: To Do, Doing, Done
@@ -68,7 +78,8 @@ Crea la estructura HTML5 para un tablero Kanban con:
 ```
 
 **Prompt Avanzado:**
-```
+
+```text
 Desarrolla una estructura HTML5 semántica para tablero Kanban que incluya:
 - Container principal con clase "kanban-board"
 - Formulario de tareas con input y botón
@@ -81,7 +92,8 @@ Desarrolla una estructura HTML5 semántica para tablero Kanban que incluya:
 #### Estilos CSS Profesionales
 
 **Prompt Básico:**
-```
+
+```text
 Diseña estilos CSS modernos para tablero Kanban con:
 - Layout CSS Grid para las 3 columnas
 - Cards elevadas para las tareas
@@ -91,7 +103,8 @@ Diseña estilos CSS modernos para tablero Kanban con:
 ```
 
 **Prompt Avanzado:**
-```
+
+```text
 Implementa sistema de diseño profesional para Kanban con CSS3:
 - Variables CSS para colores, espaciado y tipografía
 - Grid layout responsive con auto-fit
@@ -103,7 +116,8 @@ Implementa sistema de diseño profesional para Kanban con CSS3:
 ```
 
 **Prompt de Estilo Profesional:**
-```
+
+```text
 Crea un estilo más profesional para el tablero Kanban:
 - Paleta de colores moderna y consistente
 - Sombras sutiles y efectos de profundidad
@@ -116,7 +130,8 @@ Crea un estilo más profesional para el tablero Kanban:
 #### JavaScript - Lógica de Negocio
 
 **Prompt Básico:**
-```
+
+```text
 Implementa la clase TodoApp en JavaScript con:
 - Array para almacenar tareas con ID, texto y estado
 - Métodos: addTask, removeTask, moveTask
@@ -125,7 +140,8 @@ Implementa la clase TodoApp en JavaScript con:
 ```
 
 **Prompt de Funcionalidad Avanzada:**
-```
+
+```text
 Desarrolla lógica completa para aplicación Kanban:
 - Clase TodoApp con manejo de estado robusto
 - Sistema de IDs únicos con timestamp
@@ -138,7 +154,8 @@ Desarrolla lógica completa para aplicación Kanban:
 #### JavaScript - Interfaz de Usuario
 
 **Prompt de UI/UX:**
-```
+
+```text
 Implementa la interfaz JavaScript para Kanban:
 - Event listeners para formulario y botones
 - Renderizado dinámico de tarjetas de tareas
@@ -149,7 +166,8 @@ Implementa la interfaz JavaScript para Kanban:
 ```
 
 **Prompt de Drag & Drop:**
-```
+
+```text
 Agrega funcionalidad completa de drag & drop:
 - Event listeners: dragstart, dragend, dragover, drop
 - Feedback visual durante el arrastre
@@ -163,7 +181,7 @@ Agrega funcionalidad completa de drag & drop:
 
 #### Persistencia de Datos
 
-```
+```text
 Implementa sistema robusto de persistencia:
 - Guardado automático en localStorage tras cada cambio
 - Carga de datos al inicializar la aplicación
@@ -175,7 +193,7 @@ Implementa sistema robusto de persistencia:
 
 #### Validaciones y UX
 
-```
+```text
 Agrega validaciones completas para mejor UX:
 - Prevenir tareas vacías o solo espacios
 - Límite de caracteres por tarea
@@ -187,7 +205,7 @@ Agrega validaciones completas para mejor UX:
 
 #### Responsive Design
 
-```
+```text
 Optimiza el tablero Kanban para todos los dispositivos:
 - Mobile-first approach con media queries
 - Stack vertical en pantallas pequeñas
@@ -199,7 +217,7 @@ Optimiza el tablero Kanban para todos los dispositivos:
 
 #### Funcionalidades Avanzadas
 
-```
+```text
 Implementa características avanzadas en el tablero:
 - Búsqueda y filtrado de tareas
 - Categorías o etiquetas para tareas
@@ -213,7 +231,7 @@ Implementa características avanzadas en el tablero:
 
 ### Identificar Problemas Comunes
 
-```
+```text
 Analiza este tablero Kanban y identifica problemas:
 - Botones que no responden a clicks
 - Drag & drop que no funciona correctamente
@@ -225,7 +243,7 @@ Analiza este tablero Kanban y identifica problemas:
 
 ### Corrección de Funcionalidades
 
-```
+```text
 Corrige la funcionalidad de agregar tareas:
 - Verifica que todoApp esté definido antes de usar
 - Valida que los IDs de elementos existan en HTML
@@ -236,7 +254,7 @@ Corrige la funcionalidad de agregar tareas:
 
 ### Debugging Específico
 
-```
+```text
 El botón agregar tarea no funciona, diagnóstica:
 - Conflictos entre código antiguo y nuevo
 - Referencias a elementos inexistentes
@@ -249,7 +267,7 @@ El botón agregar tarea no funciona, diagnóstica:
 
 ### Mejoras Visuales
 
-```
+```text
 Mejora la presentación visual del tablero:
 - Ajusta el tamaño de botones para consistencia
 - Agrega iconos SVG en lugar de emojis
@@ -261,7 +279,7 @@ Mejora la presentación visual del tablero:
 
 ### Funcionalidades Extra
 
-```
+```text
 Agrega funcionalidades adicionales al Kanban:
 - Sistema de comentarios en tareas
 - Asignación de usuarios a tareas
@@ -273,7 +291,7 @@ Agrega funcionalidades adicionales al Kanban:
 
 ### Performance y Optimización
 
-```
+```text
 Optimiza el rendimiento del tablero Kanban:
 - Lazy loading para listas grandes
 - Debounce en búsqueda y filtros
@@ -286,6 +304,7 @@ Optimiza el rendimiento del tablero Kanban:
 ## 🎯 Estrategias de Prompting para Kanban
 
 ### 1. Desarrollo por Capas
+
 - **Capa 1**: Estructura HTML básica
 - **Capa 2**: Estilos y layout responsive
 - **Capa 3**: Lógica de datos y persistencia
@@ -293,12 +312,14 @@ Optimiza el rendimiento del tablero Kanban:
 - **Capa 5**: UX y polish final
 
 ### 2. Especificidad Progresiva
+
 - Comienza con prompts generales
 - Aumenta especificidad según necesidades
 - Define claramente el archivo a modificar
 - Incluye contexto del estado actual
 
 ### 3. Testing Continuo
+
 - Testea cada funcionalidad tras implementarla
 - Valida en diferentes dispositivos
 - Verifica persistencia de datos
@@ -307,30 +328,35 @@ Optimiza el rendimiento del tablero Kanban:
 ## 📝 Checklist de Prompts por Fase
 
 ### Fase 1: Estructura y Concepto
+
 - [X] HTML semántico para tablero Kanban
 - [X] CSS básico con grid layout
 - [X] JavaScript stub con clases base
 - [X] Conexión entre archivos verificada
 
 ### Fase 2: Funcionalidad Core
+
 - [X] Clase TodoApp con CRUD de tareas
 - [X] Persistencia en localStorage
 - [X] Renderizado dinámico de tareas
 - [X] Estados de tareas (todo/doing/done)
 
 ### Fase 3: Interactividad
+
 - [X] Formulario funcional para agregar tareas
 - [X] Botones de mover y eliminar tareas
 - [X] Drag & drop entre columnas
 - [X] Contadores actualizados en tiempo real
 
 ### Fase 4: UX y Polish
+
 - [X] Diseño profesional y moderno
 - [X] Responsive design completo
 - [X] Animaciones y transiciones
 - [X] Validaciones y manejo de errores
 
 ### Fase 5: Documentación
+
 - [X] README completo con instrucciones
 - [X] Comentarios en código
 - [X] Templates de prompts documentados
@@ -339,16 +365,19 @@ Optimiza el rendimiento del tablero Kanban:
 ## 💡 Tips para Prompts Efectivos en Kanban
 
 ### ✅ Buenos Prompts
+
 - "Implementa drag & drop nativo HTML5 para mover tareas entre columnas del Kanban"
 - "Crea un sistema de diseño con variables CSS para colores y espaciado consistente"
 - "Agrega validación para prevenir tareas vacías en el formulario de entrada"
 
 ### ❌ Prompts Vagos
+
 - "Mejora el tablero"
 - "Hazlo más bonito"
 - "Arregla los problemas"
 
 ### 🎯 Estructura Recomendada
+
 1. **Contexto**: "En este tablero Kanban con HTML/CSS/JS..."
 2. **Acción**: "Implementa/Corrige/Mejora..."
 3. **Especificación**: "...drag & drop para mover tareas entre columnas..."
@@ -357,7 +386,8 @@ Optimiza el rendimiento del tablero Kanban:
 ## 🔧 Prompts de Utilidades
 
 ### Funciones de Consola
-```
+
+```text
 Agrega funciones utilitarias accesibles desde consola:
 - KanbanDemo.addSampleTasks() para datos de prueba
 - KanbanUtils.exportTasks() para backup
@@ -366,7 +396,8 @@ Agrega funciones utilitarias accesibles desde consola:
 ```
 
 ### Atajos de Teclado
-```
+
+```text
 Implementa atajos de teclado para power users:
 - Ctrl+N para enfocar campo de nueva tarea
 - Ctrl+E para exportar tareas
@@ -376,7 +407,8 @@ Implementa atajos de teclado para power users:
 ```
 
 ### Accesibilidad
-```
+
+```text
 Mejora la accesibilidad del tablero Kanban:
 - ARIA labels para screen readers
 - Navegación por teclado completa
@@ -406,6 +438,7 @@ Mejora la accesibilidad del tablero Kanban:
 Este proyecto demostró el poder de GitHub Copilot para desarrollo incremental, donde prompts específicos y bien estructurados llevaron desde un concepto simple de "lista de tareas" hasta un tablero Kanban completamente funcional con:
 
 ### ✨ Características Finales
+
 - **Tablero Kanban** responsive con 3 columnas
 - **Drag & Drop** nativo para mover tareas
 - **Persistencia** automática en localStorage
@@ -414,6 +447,7 @@ Este proyecto demostró el poder de GitHub Copilot para desarrollo incremental, 
 - **Documentación completa** y templates reusables
 
 ### 🚀 Lecciones Aprendidas
+
 1. **Iteración es clave**: Cada prompt mejora sobre el anterior
 2. **Especificidad funciona**: Prompts detallados dan mejores resultados
 3. **Context matters**: Proporcionar código existente ayuda enormemente
