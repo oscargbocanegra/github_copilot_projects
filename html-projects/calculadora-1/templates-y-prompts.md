@@ -5,12 +5,14 @@ Registro completo de prompts utilizados y recomendados para crear una calculador
 ## 🎯 Estructura de Prompts Efectivos
 
 ### 1. Anatomía de un Prompt Efectivo
-```
+
+```md
 [CONTEXTO] + [ACCIÓN ESPECÍFICA] + [REQUISITOS] + [FORMATO/ESTILO]
 ```
 
 **Ejemplo:**
-```
+
+```md
 Crea una calculadora HTML5 + JavaScript con interfaz moderna, funciones básicas (+,-,*,/), soporte para teclado y validación de errores como división por cero.
 ```
 
@@ -19,27 +21,32 @@ Crea una calculadora HTML5 + JavaScript con interfaz moderna, funciones básicas
 ### 📱 Prompts Iniciales de Creación
 
 **1. Estructura Básica de la Calculadora:**
-```
+
+```md
 Crea una calculadora en HTML con CSS y JavaScript
 ```
 
 **2. Corrección de Funcionalidad:**
-```
+
+```md
 No puedo realizar operaciones, modifica la calculadora para usarla correctamente
 ```
 
 **3. Mejora Visual de Operaciones:**
-```
+
+```md
 Haz que las operaciones aparezcan en la barra de texto, recuerda indicarme cual es el archivo a actualizar
 ```
 
 **4. Cambio de Estilo:**
-```
+
+```md
 Deja el fondo blanco
 ```
 
 **5. Documentación de Prompts:**
-```
+
+```md
 Registra los prompts usados y los que deberíamos tener para crear este proyecto calculadora
 ```
 
@@ -48,7 +55,8 @@ Registra los prompts usados y los que deberíamos tener para crear este proyecto
 #### Estructura HTML
 
 **Prompt Básico:**
-```
+
+```md
 Crea la estructura HTML5 para una calculadora con:
 - Pantalla de visualización (input readonly)
 - Grid de botones 4x4 para números y operadores
@@ -57,7 +65,8 @@ Crea la estructura HTML5 para una calculadora con:
 ```
 
 **Prompt Avanzado:**
-```
+
+```md
 Desarrolla una estructura HTML5 semántica para calculadora que incluya:
 - Container principal con clase "calculator"
 - Display input con ID único para JavaScript
@@ -69,7 +78,8 @@ Desarrolla una estructura HTML5 semántica para calculadora que incluya:
 #### Estilos CSS
 
 **Prompt Básico:**
-```
+
+```md
 Diseña estilos CSS modernos para la calculadora con:
 - Layout CSS Grid para los botones
 - Colores diferenciados por tipo de botón
@@ -78,7 +88,8 @@ Diseña estilos CSS modernos para la calculadora con:
 ```
 
 **Prompt Avanzado:**
-```
+
+```md
 Implementa estilos CSS3 profesionales para calculadora:
 - CSS Grid layout 4x4 responsive
 - Esquema de colores: números (gris), operadores (naranja), igual (verde), limpiar (rojo)
@@ -89,7 +100,8 @@ Implementa estilos CSS3 profesionales para calculadora:
 ```
 
 **Prompt de Personalización:**
-```
+
+```md
 Modifica los estilos CSS para:
 - Cambiar el fondo de gradiente a blanco sólido
 - Mantener contraste y legibilidad
@@ -100,7 +112,8 @@ Modifica los estilos CSS para:
 #### JavaScript Funcional
 
 **Prompt Básico:**
-```
+
+```md
 Implementa la lógica JavaScript para calculadora con:
 - Variables para estado actual (números, operadores)
 - Funciones para manejar clicks de botones
@@ -109,7 +122,8 @@ Implementa la lógica JavaScript para calculadora con:
 ```
 
 **Prompt de Funcionalidad Avanzada:**
-```
+
+```md
 Desarrolla JavaScript completo para calculadora que incluya:
 - Manejo de estado: currentInput, previousInput, operation
 - Funciones separadas: handleNumber(), handleOperation(), calculate()
@@ -120,7 +134,8 @@ Desarrolla JavaScript completo para calculadora que incluya:
 ```
 
 **Prompt de Mejora UX:**
-```
+
+```md
 Mejora el JavaScript para mostrar operaciones en tiempo real:
 - Mostrar expresión completa mientras se escribe
 - Visualizar "5 + 3" antes de mostrar resultado
@@ -132,7 +147,8 @@ Mejora el JavaScript para mostrar operaciones en tiempo real:
 #### Validaciones y Testing
 
 **Prompt de Validación:**
-```
+
+```md
 Agrega validaciones robustas al JavaScript:
 - Prevenir múltiples puntos decimales
 - Limitar longitud de números a 12 dígitos
@@ -142,7 +158,8 @@ Agrega validaciones robustas al JavaScript:
 ```
 
 **Prompt de Testing:**
-```
+
+```md
 Crea casos de prueba para validar:
 - Operaciones básicas funcionan correctamente
 - División por cero muestra error apropiado
@@ -155,7 +172,7 @@ Crea casos de prueba para validar:
 
 #### Soporte para Teclado
 
-```
+```md
 Implementa soporte completo para teclado en la calculadora:
 - Números 0-9 para entrada de dígitos
 - Operadores +, -, *, / para operaciones
@@ -168,7 +185,7 @@ Implementa soporte completo para teclado en la calculadora:
 
 #### Manejo de Errores
 
-```
+```md
 Agrega manejo robusto de errores:
 - División por cero con mensaje claro
 - Entrada inválida con validación
@@ -179,7 +196,7 @@ Agrega manejo robusto de errores:
 
 #### Responsive Design
 
-```
+```md
 Optimiza la calculadora para dispositivos móviles:
 - Media queries para pantallas pequeñas
 - Tamaños de botón apropiados para táctil
@@ -191,7 +208,8 @@ Optimiza la calculadora para dispositivos móviles:
 ## 🔍 Prompts de Debugging
 
 ### Identificar Problemas
-```
+
+```md
 Analiza este código de calculadora y identifica:
 - Funciones que no están conectadas correctamente
 - Errores en el manejo de estado
@@ -201,7 +219,8 @@ Analiza este código de calculadora y identifica:
 ```
 
 ### Refactoring
-```
+
+```md
 Refactoriza este código JavaScript para mejorar:
 - Legibilidad y organización del código
 - Separación de responsabilidades
@@ -213,7 +232,8 @@ Refactoriza este código JavaScript para mejorar:
 ## 📱 Prompts de Mejoras Futuras
 
 ### Funcionalidades Avanzadas
-```
+
+```md
 Agrega funcionalidades científicas a la calculadora:
 - Funciones matemáticas: sqrt, pow, sin, cos, tan
 - Constantes: π, e
@@ -223,7 +243,8 @@ Agrega funcionalidades científicas a la calculadora:
 ```
 
 ### Personalización
-```
+
+```md
 Implementa opciones de personalización:
 - Temas de color (claro, oscuro, colorido)
 - Tamaños de fuente ajustables
@@ -233,7 +254,8 @@ Implementa opciones de personalización:
 ```
 
 ### Accesibilidad
-```
+
+```md
 Mejora la accesibilidad de la calculadora:
 - Atributos ARIA apropiados
 - Navegación por teclado completa
@@ -245,18 +267,21 @@ Mejora la accesibilidad de la calculadora:
 ## 🎯 Estrategias de Prompting
 
 ### 1. Desarrollo Incremental
+
 - Comienza con estructura básica
 - Agrega funcionalidad paso a paso
 - Itera sobre mejoras específicas
 - Testea cada componente individualmente
 
 ### 2. Especificidad en Prompts
+
 - Define claramente qué archivo modificar
 - Especifica comportamiento deseado
 - Incluye casos edge a considerar
 - Menciona estándares a seguir
 
 ### 3. Contexto en Solicitudes
+
 - Proporciona código existente relevante
 - Explica el problema específico
 - Define el resultado esperado
@@ -265,43 +290,49 @@ Mejora la accesibilidad de la calculadora:
 ## 📝 Checklist de Prompts por Fase
 
 ### Fase 1: Estructura Base
+
 - [X] HTML semántico con grid de botones
 - [X] CSS básico con layout responsive
 - [X] JavaScript con funciones stub
 - [X] Conexión entre archivos verificada
 
 ### Fase 2: Funcionalidad Core
+
 - [X] Operaciones matemáticas básicas
 - [X] Manejo de estado de calculadora
 - [X] Validaciones de entrada
 - [X] Display de números y operadores
 
 ### Fase 3: Mejoras UX
+
 - [X] Soporte para teclado
 - [X] Visualización de operaciones
 - [X] Animaciones y transiciones
 - [X] Manejo de errores amigable
 
 ### Fase 4: Pulimento
+
 - [X] Responsive design completo
 - [X] Accesibilidad básica
 - [X] Testing de casos edge
 - [X] Documentación completa
 
-
 ## 💡 Tips para Prompts Efectivos
 
 ### ✅ Buenos Prompts
+
 - "Modifica el JavaScript para mostrar operaciones en tiempo real en la pantalla"
 - "Agrega validación para prevenir múltiples puntos decimales"
 - "Implementa soporte de teclado con preventDefault para división"
 
 ### ❌ Prompts Vagos
+
 - "Mejora la calculadora"
 - "Hazla más bonita"
 - "Arregla los bugs"
 
 ### 🎯 Estructura Recomendada
+
 1. **Contexto**: "En esta calculadora HTML/CSS/JS..."
 2. **Acción**: "Modifica/Agrega/Crea..."
 3. **Especificación**: "...para que muestre operaciones en tiempo real..."

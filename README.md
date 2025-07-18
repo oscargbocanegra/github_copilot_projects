@@ -7,7 +7,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://choosealicense.com/licenses/mit/)
 
 > **Colección de proyectos para aprender desarrollo web moderno con GitHub Copilot**
-> 
+>
 > Una guía práctica paso a paso que documenta el proceso de creación de aplicaciones web interactivas utilizando GitHub Copilot como asistente de desarrollo.
 
 ---
@@ -21,7 +21,7 @@
 - [📚 Metodología de Aprendizaje](#-metodología-de-aprendizaje)
 - [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
 - [📈 Roadmap de Aprendizaje](#-roadmap-de-aprendizaje)
-- [🤝 Contribución](#-contribución)
+- [📄 Licencia](#-licencia)
 - [📄 Licencia](#-licencia)
 
 ---
@@ -45,16 +45,17 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 
 ### 1️⃣ 🧮 Calculadora Web Moderna
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#)
-[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_2.1-0066CC?style=flat-square)](#)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Accessibility](https://img.shields.io/badge/Accessibility-WCAG_2.1-0066CC?style=flat-square)
 
 **Proyecto:** [📁 Ver Calculadora](html-projects/calculadora-1/README.md)
 
 > **Descripción:** Calculadora funcional con interfaz moderna disponible en dos versiones: estándar y con accesibilidad completa para usuarios con discapacidades.
 
 **🔥 Características:**
+
 - 🧮 Operaciones matemáticas completas
 - ♿ Versión con accesibilidad WCAG 2.1
 - ⌨️ Soporte completo para teclado
@@ -67,17 +68,18 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 
 ### 2️⃣ 📋 Tablero Kanban - Todo App
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#)
-[![Kanban](https://img.shields.io/badge/Kanban-Board-FF6B6B?style=flat-square)](#)
-[![LocalStorage](https://img.shields.io/badge/LocalStorage-Persistence-4ECDC4?style=flat-square)](#)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Kanban](https://img.shields.io/badge/Kanban-Board-FF6B6B?style=flat-square)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-Persistence-4ECDC4?style=flat-square)
 
 **Proyecto:** [📁 Ver Todo App Kanban](html-projects/todo-app/README.md)
 
 > **Descripción:** Aplicación de gestión de tareas con interfaz Kanban completa, incluyendo drag & drop, persistencia local y funcionalidades avanzadas como modo oscuro y sistema de usuarios.
 
 **🚀 Características:**
+
 - 📋 Tablero Kanban con 3 columnas (To Do, Doing, Done)
 - 🖱️ Drag & Drop nativo para mover tareas
 - 🌙 Modo oscuro con toggle persistente
@@ -91,18 +93,19 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 
 ### 3️⃣ 📊 Encuesta IA Generativa
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#)
-[![Data Analysis](https://img.shields.io/badge/Data-Analysis-9B59B6?style=flat-square)](#)
-[![AI](https://img.shields.io/badge/AI-Survey-FF9FF3?style=flat-square)](#)
-[![i18n](https://img.shields.io/badge/i18n-Multilanguage-17A2B8?style=flat-square)](#)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Data Analysis](https://img.shields.io/badge/Data-Analysis-9B59B6?style=flat-square)
+![AI](https://img.shields.io/badge/AI-Survey-FF9FF3?style=flat-square)
+![i18n](https://img.shields.io/badge/i18n-Multilanguage-17A2B8?style=flat-square)
 
 **Proyecto:** [📁 Ver Encuesta IA Generativa](html-projects/encuesta-ia-generativa/README.md)
 
 > **Descripción:** Encuesta interactiva completa sobre perspectivas de IA Generativa con análisis personalizado de resultados, sistema de exportación y soporte multiidioma.
 
 **🧠 Características:**
+
 - 🌍 Soporte multiidioma (ES/EN/FR)
 - 📈 Análisis personalizado de respuestas
 - 🎯 Sistema de insights inteligente
@@ -117,7 +120,7 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 
 ## 📋 Estructura del Repositorio
 
-```
+```md
 github_copilot_projects/
 ├── 📄 README.md                                    # Documentación principal
 ├── 📁 html-projects/                               # Proyectos de desarrollo web
@@ -201,11 +204,13 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 - Documentación del proceso de colaboración humano-IA
 
 #### 2. 📈 **Desarrollo Progresivo**
+
 - **Nivel Básico**: Estructura HTML y estilos fundamentales
 - **Nivel Intermedio**: Interactividad con JavaScript
 - **Nivel Avanzado**: Arquitectura compleja y optimización
 
 #### 3. 📊 **Validación Continua**
+
 - Testing en múltiples navegadores
 - Validación de accesibilidad
 - Optimización de performance
@@ -230,16 +235,19 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 ## 🛠️ Tecnologías Utilizadas
 
 ### 🎨 Frontend Core
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ### 🎯 Herramientas de Desarrollo
+
 ![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ### 📱 Características Técnicas
+
 - **Responsive Design**: Mobile-first approach
 - **Progressive Enhancement**: Funcionalidad base sin JavaScript
 - **Web Standards**: HTML5, CSS3, ES6+
@@ -251,16 +259,19 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 ## 📈 Roadmap de Aprendizaje
 
 ### ✅ Fase 1: Fundamentos (Completada)
+
 - [x] **Calculadora Web**: HTML/CSS/JS básico
 - [x] **Accesibilidad**: ARIA, navegación por teclado
 - [x] **Responsive Design**: CSS Grid, media queries
 
 ### ✅ Fase 2: Interactividad (Completada)
+
 - [x] **Todo App Kanban**: Gestión de estado con JavaScript
 - [x] **Drag & Drop**: APIs nativas del navegador
 - [x] **LocalStorage**: Persistencia de datos
 
 ### ✅ Fase 3: Aplicaciones Complejas (Completada)
+
 - [x] **Encuesta IA**: Análisis de datos y exportación
 - [x] **Internacionalización**: Soporte multiidioma
 - [x] **Temas dinámicos**: Modo oscuro/claro.
@@ -272,18 +283,21 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 ### 📖 Documentación por Proyecto
 
 #### 🧮 [Calculadora Web](html-projects/calculadora-1/README.md)
+
 - **Objetivo**: Fundamentos de desarrollo web
 - **Nivel**: Principiante a Intermedio
 - **Duración estimada**: 4-6 horas
 - **Conceptos clave**: HTML semántico, CSS Grid, JavaScript básico
 
 #### 📋 [Todo App Kanban](html-projects/todo-app/README.md)
+
 - **Objetivo**: Aplicación interactiva completa
 - **Nivel**: Intermedio
 - **Duración estimada**: 8-12 horas
 - **Conceptos clave**: Estado de aplicación, APIs web, UX avanzada
 
 #### 📊 [Encuesta IA Generativa](html-projects/encuesta-ia-generativa/README.md)
+
 - **Objetivo**: Análisis de datos y exportación
 - **Nivel**: Intermedio a Avanzado
 - **Duración estimada**: 12-16 horas
@@ -292,6 +306,7 @@ Este repositorio utiliza una metodología de **aprendizaje incremental** basada 
 ### 🎯 Templates de Prompts
 
 Cada proyecto incluye un archivo `templates-y-prompts.md` con:
+
 - ✅ Prompts utilizados durante el desarrollo
 - ✅ Estrategias efectivas de comunicación con Copilot
 - ✅ Casos de debugging y resolución de problemas
@@ -301,15 +316,14 @@ Cada proyecto incluye un archivo `templates-y-prompts.md` con:
 
 ## 📄 Licencia
 
-Este proyecto está bajo la **Licencia MIT**. 
+Este proyecto está bajo la **Licencia MIT**.
 
-```
+```md
 MIT License - Libre para uso educativo, personal y comercial
 Ver archivo LICENSE para detalles completos
 ```
 
 ---
-
 
 ### 🎯 **Estado del Proyecto**: ✅ Activo y en crecimiento
 

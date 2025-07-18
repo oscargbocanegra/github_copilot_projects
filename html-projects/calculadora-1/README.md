@@ -4,7 +4,7 @@ Una calculadora moderna y funcional desarrollada con HTML, CSS y JavaScript vani
 
 ## 📁 Estructura del Proyecto
 
-```
+```md
 calculadora/
 ├── index.html                    # Versión básica funcional
 ├── index-semantico.html          # Versión semántica con accesibilidad
@@ -20,12 +20,14 @@ calculadora/
 ## 🚀 Versiones Disponibles
 
 ### 📱 Versión Básica (`index.html`)
+
 - Calculadora funcional estándar
 - Interfaz moderna y responsive
 - Operaciones matemáticas básicas
 - Soporte para teclado
 
 ### ♿ Versión Semántica (`index-semantico.html`)
+
 - **Accesibilidad completa** con ARIA y screen readers
 - **Navegación por teclado** optimizada
 - **Anuncios automáticos** de operaciones y resultados
@@ -35,6 +37,7 @@ calculadora/
 ## ✨ Características Comunes
 
 ### Funcionalidades
+
 - ✅ Operaciones básicas: suma (+), resta (-), multiplicación (×), división (/)
 - ✅ Soporte para números decimales
 - ✅ Función de limpiar (C) y borrar último dígito (⌫)
@@ -45,6 +48,7 @@ calculadora/
 - ✅ Redondeo automático para precisión
 
 ### Diseño
+
 - 🎨 Interfaz moderna con CSS Grid
 - 📱 Diseño responsive (móviles y escritorio)
 - ⚡ Animaciones suaves
@@ -54,6 +58,7 @@ calculadora/
 ## 🌟 Características Específicas de la Versión Semántica
 
 ### Accesibilidad
+
 - **Screen Reader Support**: Anuncios automáticos de operaciones
 - **ARIA Labels**: Descriptivos para todos los elementos
 - **Keyboard Navigation**: Navegación completa por teclado
@@ -62,12 +67,14 @@ calculadora/
 - **Live Regions**: Actualizaciones dinámicas anunciadas
 
 ### Mejoras UX
+
 - **Anuncios Contextuales**: "Calculando...", "Resultado: X"
 - **Validaciones Audibles**: Errores anunciados claramente
 - **Estados de la Calculadora**: Visual y audible
 - **Soporte Multi-modal**: Mouse, teclado y táctil
 
 ### Técnicas Implementadas
+
 - `role="application"` para contexto de calculadora
 - `aria-live="polite"` para anuncios no intrusivos
 - `aria-atomic="true"` para anuncios completos
@@ -77,13 +84,17 @@ calculadora/
 ## 🎯 Uso Recomendado
 
 ### Para Desarrollo Estándar
+
 **Usa `index.html`** si necesitas:
+
 - Implementación rápida
 - Funcionalidad básica
 - Menor complejidad de código
 
 ### Para Proyectos Inclusivos
+
 **Usa `index-semantico.html`** si necesitas:
+
 - Cumplimiento de accesibilidad
 - Soporte para usuarios con discapacidades
 - Mejores prácticas de HTML semántico
@@ -92,17 +103,20 @@ calculadora/
 ## 🚀 Cómo Usar
 
 ### Instalación
+
 1. Clona o descarga el proyecto
 2. Abre `index.html` (básica) o `index-semantico.html` (semántica)
 3. ¡Listo para usar!
 
 ### Uso con Mouse/Táctil
+
 - Haz clic en los números para ingresarlos
 - Usa los operadores (+, -, ×, ÷) para operaciones
 - Presiona = para calcular el resultado
 - C para limpiar todo, ⌫ para borrar último dígito
 
 ### Uso con Teclado
+
 - **Números**: 0-9
 - **Operadores**: +, -, *, /
 - **Calcular**: Enter o =
@@ -111,7 +125,9 @@ calculadora/
 - **Decimal**: . (punto)
 
 ### Uso con Screen Reader
+
 La versión semántica anuncia automáticamente:
+
 - Números y operadores ingresados
 - Estado de cálculos
 - Resultados y errores
@@ -120,11 +136,13 @@ La versión semántica anuncia automáticamente:
 ## 🛠️ Tecnologías Utilizadas
 
 ### HTML5
+
 - Estructura semántica con `<main>`, `<section>`, `<header>`
 - Atributos ARIA para accesibilidad
 - Roles semánticos (`application`, `grid`, `gridcell`)
 
 ### CSS3
+
 - **Grid Layout** para botones
 - **Custom Properties** (CSS Variables)
 - **Media Queries** para responsive
@@ -132,6 +150,7 @@ La versión semántica anuncia automáticamente:
 - **Hover Effects** y transiciones
 
 ### JavaScript ES6+
+
 - **DOM Manipulation** moderna
 - **Event Listeners** para teclado y mouse
 - **ARIA Management** dinámico
@@ -141,6 +160,7 @@ La versión semántica anuncia automáticamente:
 ## 🧪 Testing de Accesibilidad
 
 ### Herramientas Recomendadas
+
 ```bash
 # Chrome DevTools Lighthouse
 # Ejecutar audit de accesibilidad
@@ -153,6 +173,7 @@ La versión semántica anuncia automáticamente:
 ```
 
 ### Casos de Prueba
+
 - [x] Navegación completa por teclado
 - [x] Anuncios de screen reader apropiados
 - [x] Contraste de colores suficiente
@@ -194,7 +215,7 @@ axe http://localhost:8000/index-semantico.html
 
 ## 📚 Prompts de GitHub Copilot Utilizados
 
-```
+```md
 6. "Desarrolla una estructura HTML5 semántica para calculadora que incluya:
    - Container principal con clase 'calculator'
    - Display input con ID único para JavaScript
@@ -208,12 +229,14 @@ axe http://localhost:8000/index-semantico.html
 ## 🚀 Posibles Mejoras Futuras
 
 ### Para Ambas Versiones
+
 - [ ] Funciones científicas (√, x², %)
 - [ ] Historial de operaciones
 - [ ] Temas de color personalizables
 - [ ] Modo memoria (M+, M-, MR, MC)
 
 ### Específicas para Versión Semántica
+
 - [ ] Soporte para múltiples idiomas
 - [ ] Configuración de velocidad de anuncios
 - [ ] Modo alto contraste automático
