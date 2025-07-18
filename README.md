@@ -195,6 +195,7 @@ cd html-projects/calculadora-1/
 Este repositorio utiliza una metodología de **aprendizaje incremental** basada en:
 
 #### 1. 🤖 **GitHub Copilot como Mentor**
+
 - Prompts estructurados y específicos
 - Iteración basada en feedback de la IA
 - Documentación del proceso de colaboración humano-IA
