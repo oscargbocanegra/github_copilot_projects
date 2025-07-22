@@ -36,7 +36,7 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 - ✅ **CSS3 Moderno**: Flexbox, Grid, animaciones y diseño responsivo
 - ✅ **JavaScript ES6+**: Programación funcional, APIs modernas y manipulación del DOM
 - ✅ **UX/UI Design**: Principios de diseño centrado en el usuario
-- ✅ **Desarrollo Iterativo**: Metodología incremental con validación continua
+- ✅ **Desarrollo Iterativo**: Metodología incremental con validación continua.
 
 ---
 
