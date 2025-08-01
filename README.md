@@ -59,7 +59,7 @@ Este repositorio documenta mi jornada de aprendizaje de desarrollo web utilizand
 - ♿ Versión con accesibilidad WCAG 2.1
 - ⌨️ Soporte completo para teclado
 - 📱 Diseño responsive optimizado
-- 🎨 Interfaz moderna con CSS Grid
+- 🎨 Interfaz moderna con CSS Grid.
 
 **🛠️ Tecnologías:** HTML5 Semántico, CSS3 Grid, JavaScript ES6, ARIA
 
